@@ -93,7 +93,7 @@ const LandingPage2 = () => {
         <div className={styles.section2Buttons}>
           <button
             className={styles.btn}
-            onClick={() => navigateTo("/storyTellers")}
+            onClick={() => navigateTo("/storyTellers/page1")}
           >
             I am a StoryTeller
           </button>

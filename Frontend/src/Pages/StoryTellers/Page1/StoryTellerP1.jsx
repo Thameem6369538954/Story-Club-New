@@ -1,15 +1,28 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Heading, Text, calc } from "@chakra-ui/react";
 import React, { useContext, useEffect, useRef, useState } from "react";
-import styles from "./StoryWritersP2.module.css";
-import { useNavigate } from "react-router-dom";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
+import styles from "./StoryTellersP1.module.css";
 import { MdDownloadDone } from "react-icons/md";
-import person from "./Images/person.png";
 import { AuthContext } from "../../../Context/AuthContext";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-export default function StoryWritersP2() {
+
+export default function StoryTellersP1() {
   const navigateTo = useNavigate();
-  const {storyTitle, setStoryTitle} = useContext(AuthContext)
+  const {activeCategory, setActiveCategory} = useContext(AuthContext)
+  const categories = [
+    "Stories about social media",
+    "Teenagers stories",
+    "College stories",
+    "Breakup Stores",
+    "Dating Stories",
+    "Gaming Stories",
+    "Sports Stories",
+    "School Stories",
+    "Artificial intelligence Stories",
+  ];
   const h1Ref = useRef(null);
   const h1Ref2 = useRef(null);
   useEffect(() => {
@@ -36,11 +49,12 @@ export default function StoryWritersP2() {
       spanText(h1Ref2.current);
     }
   }, []);
+
   const handleNext = () => {
-    if (storyTitle !== "") {
-      navigateTo("/storyWriters/page3");
+    if (activeCategory !== "Slelect Category...") {
+      navigateTo("/storyTellers/page2");
     } else {
-      alert("Please enter a story title");
+      toast.error("Please select a category");
     }
   };
   return (
@@ -51,11 +65,6 @@ export default function StoryWritersP2() {
           <p onClick={() => navigateTo("/")}>Back to Homepage</p>
           <p></p>
         </div>
-        <div className={styles.section1}>
-          <p>
-            Get your stories featured on Story Club in just <span>Rs 49</span>
-          </p>
-        </div>
         <Box
           display={"flex"}
           flexDirection={{ base: "column", md: "column", lg: "row", xl: "row" }}
@@ -63,7 +72,7 @@ export default function StoryWritersP2() {
           alignItems={"center"}
           p={"1rem"}
           gap={"1rem"}
-          //   border={"1px solid black"}
+        //   border={"1px solid black"}
           w={{ base: "100%", md: "100%", lg: "100%", xl: "100%" }}
           m={"auto"}
         >
@@ -77,14 +86,8 @@ export default function StoryWritersP2() {
             mt={0}
           >
             <h1 ref={h1Ref} className={styles.animation}>
-              Write your Story !
+              Have a Story to Share?
             </h1>
-            <Text
-              fontSize={"1rem"}
-              mt={{ base: "-1.5rem", md: "-1.5rem", lg: "-3rem", xl: "-3rem" }}
-            >
-              In 100 - 500 words !
-            </Text>
             <div
               style={{
                 display: "flex",
@@ -96,30 +99,27 @@ export default function StoryWritersP2() {
               <p>-----</p>
               <p style={{ color: "red" }}>-</p>
             </div>
-            <Text fontSize={"1.5rem"}>Add Title to your Story!</Text>
-            <Box
-              className={styles.box}
-              h={"6rem"}
-              display={"flex"}
-              flexDirection={"column"}
-              justifyContent={"space-between"}
-            >
+            <Text fontSize={"1.5rem"}>
+              Share your story and get a chance to win 499₹
+            </Text>
+            <Box className={styles.box} h={"6rem"}>
               <b>
                 <i style={{ fontSize: "0.6rem" }}>Let the story begin...</i>
               </b>
-              <input
-                type="text"
-                placeholder="Write your title here..."
-                value={storyTitle}
-                onChange={(e) => setStoryTitle(e.target.value)}
-              />
-
+              <Text
+                textAlign={"center"}
+                color={
+                  activeCategory !== "Slelect Category..." ? "black" : "gray"
+                }
+              >
+                {activeCategory}
+              </Text>
               <Text color={"gray"} fontSize={"0.8rem"} textAlign={"end"}>
-                just one step
+                03/03
               </Text>
             </Box>
             <Box display={"flex"} justifyContent={"space-between"}>
-              <Text>02/03</Text>
+              <Text>01/03</Text>
               <MdDownloadDone
                 size={25}
                 style={{
@@ -127,26 +127,14 @@ export default function StoryWritersP2() {
                   border: "1px solid black",
                   borderRadius: "50%",
                   padding: "0.2rem",
-                  display: storyTitle.length > 0 ? "block" : "none",
+                  display:
+                    activeCategory !== "Slelect Category..." ? "flex" : "none",
                 }}
               />
             </Box>
-            <Box
-              display={"flex"}
-              gap={"1rem"}
-              w={"100%"}
-            //   border={"1px solid black"}
-            >
-              <button
-                className={styles.btn}
-                onClick={() => navigateTo("/storyWriters/page1")}
-              >
-                Go back
-              </button>
-              <button className={styles.btn} onClick={handleNext}>
-                Next
-              </button>
-            </Box>
+            <button className={styles.btn} onClick={handleNext}>
+              Next
+            </button>
           </Box>
           <Box
             //   border={"1px solid black"}
@@ -154,7 +142,37 @@ export default function StoryWritersP2() {
             mt={0}
             p={"1rem"}
           >
-            <Image src={person} alt="person" w={"80%"} m={"auto"} />
+            <Box
+              display={"grid"}
+              gridTemplateColumns={{
+                base: "repeat(2, 1fr)",
+                md: "repeat(3, 1fr)",
+                lg: "repeat(2, 1fr)",
+                xl: "repeat(3, 1fr)",
+              }}
+              //   gap={"1rem"}
+            >
+              {categories.map((category) => (
+                <Box
+                  w={{ base: "10rem", md: "12rem", lg: "13rem", xl: "13rem" }}
+                  h={{ base: "8rem", md: "9rem", lg: "9rem", xl: "9rem" }}
+                  border={"1px solid #f7ded5"}
+                  display={"flex"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  onClick={() => setActiveCategory(category)}
+                  p={"1rem"}
+                  key={category}
+                  cursor={"pointer"}
+                  _hover={{
+                    backgroundColor: "#f7ded5",
+                    border: "1px solid #DC6E66",
+                  }}
+                >
+                  {category}
+                </Box>
+              ))}
+            </Box>
           </Box>
         </Box>
       </Box>

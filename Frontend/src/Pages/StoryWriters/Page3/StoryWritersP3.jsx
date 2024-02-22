@@ -1,24 +1,30 @@
 import { Box, Image, Text } from "@chakra-ui/react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { MdDownloadDone } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import styles from "./StoryWritersP3.module.css";
 import person from "./Images/person.png";
 import fileImg from "./Images/fileImg.png";
+import { AuthContext } from "../../../Context/AuthContext";
+import axios from '../../../utils/baseUrl';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function StoryWritersP3() {
   const navigateTo = useNavigate();
   const h1Ref = useRef(null);
   const h1Ref2 = useRef(null);
   const [file, setFile] = useState(null);
+  var {activeCategory,storyTitle} = useContext(AuthContext)
+  console.log({activeCategory,storyTitle});
 
   const handleFileSelect = (e) => {
     const selectedFile = e.target.files[0];
     if (selectedFile && isValidFileType(selectedFile)) {
       setFile(selectedFile);
     } else {
-      alert("Please select a PDF or Word file.");
+      toast.error("Please select a PDF or Word file.")
       // Clear the file input
       e.target.value = null;
     }
@@ -35,6 +41,7 @@ export default function StoryWritersP3() {
       setFile(droppedFile);
     } else {
       alert("Please drop a PDF or Word file.");
+    
     }
   };
 
@@ -70,14 +77,34 @@ export default function StoryWritersP3() {
       spanText(h1Ref2.current);
     }
   }, []);
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
     if (!file) {
-      alert("Please select a file.");
+      toast.error("Please select a PDF or Word file.")
       return;
     }
-    console.log(file);
+    //working
+    console.log(file,"this is selected file....");
+
+    const formData = new FormData();
+    formData.append("source", file);
+    formData.append("category",activeCategory)
+    formData.append('title',storyTitle)
+
+    const response =await  axios.post('/story_writer',formData,{
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    })
+    console.log(response.status,".....................>>");
+    if(response.status == 200){
+      toast.success("successfully added your story")
+    }else{
+      toast.error("something went wrong!!please try again later")
+    }
     setFile(null);
-    navigateTo("/storyWriters/submitted");
+    navigateTo("/");
+
+
   };
   return (
     <>

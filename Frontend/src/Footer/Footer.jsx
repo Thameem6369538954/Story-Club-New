@@ -4,6 +4,9 @@ import logo from "./Images/logo.png";
 import { RiFacebookFill } from "react-icons/ri";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { BsYoutube } from "react-icons/bs";
+import axios from '../utils/baseUrl.jsx'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Footer() {
   const [formData, setFormData] = useState({
@@ -11,8 +14,18 @@ export default function Footer() {
   });
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    alert("Thank you for subscribing");
+    console.log(formData,'kk');
+    try {
+      const response = axios.post('/subscription',{email:formData.email})
+      console.log(response,"oooiii");
+      // Assuming 'response' is your response object
+      toast.success("successfully subscribed!!")
+      setFormData({ email: "" })
+
+     
+    } catch (error) {
+      console.log(error)
+    }
   };
   const handleChange = (e) => {
     const { name, value } = e.target;

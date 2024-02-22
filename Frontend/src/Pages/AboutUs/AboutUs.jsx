@@ -30,8 +30,11 @@ import { RiContactsBookLine } from "react-icons/ri";
 import { AiOutlineMessage } from "react-icons/ai";
 import { Box, Heading } from "@chakra-ui/react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import Footer from "../../Footer/Footer";
+import axios from '../../utils/baseUrl'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AboutUs = () => {
   const navigateTo = useNavigate();
@@ -41,6 +44,7 @@ const AboutUs = () => {
     mobile: "",
     message: "",
   });
+
   const h1Ref = useRef(null);
   const pRef = useRef(null);
   const ref3 = useRef(null);
@@ -104,7 +108,7 @@ const AboutUs = () => {
     },
     {
       id: 5,
-      name: "Aleeshya",
+      name: "Aleeshya krishna",
       position: "Backend Developer",
       image: aleeshya,
     },
@@ -198,10 +202,24 @@ const AboutUs = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit =async (e) => {
     e.preventDefault();
     console.log("clicked");
-    console.log(formData);
+    console.log(formData,"daaaaataas");
+    try {
+      const response = await axios.post('/get_in_touch',formData)
+      console.log(response,"oooomb");
+      const msg =response.data.message
+      if(response.status ==200){
+        toast.success(msg)
+      }else{
+        toast.error(msg)
+      }
+
+      navigateTo("/")
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

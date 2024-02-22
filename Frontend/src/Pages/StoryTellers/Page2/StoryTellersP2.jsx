@@ -1,13 +1,13 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import React, { useContext, useEffect, useRef, useState } from "react";
-import styles from "./StoryWritersP2.module.css";
+import styles from "./StoryTellersP2.module.css";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { MdDownloadDone } from "react-icons/md";
-import person from "./Images/person.png";
+import person from "./image/person.png";
 import { AuthContext } from "../../../Context/AuthContext";
 
-export default function StoryWritersP2() {
+export default function StoryTellersP2() {
   const navigateTo = useNavigate();
   const {storyTitle, setStoryTitle} = useContext(AuthContext)
   const h1Ref = useRef(null);
@@ -38,7 +38,7 @@ export default function StoryWritersP2() {
   }, []);
   const handleNext = () => {
     if (storyTitle !== "") {
-      navigateTo("/storyWriters/page3");
+      navigateTo("/storyTellers/page3");
     } else {
       alert("Please enter a story title");
     }
@@ -77,7 +77,7 @@ export default function StoryWritersP2() {
             mt={0}
           >
             <h1 ref={h1Ref} className={styles.animation}>
-              Write your Story !
+              Tell your Story !
             </h1>
             <Text
               fontSize={"1rem"}
@@ -139,7 +139,7 @@ export default function StoryWritersP2() {
             >
               <button
                 className={styles.btn}
-                onClick={() => navigateTo("/storyWriters/page1")}
+                onClick={() => navigateTo("/storyTellers/page1")}
               >
                 Go back
               </button>
