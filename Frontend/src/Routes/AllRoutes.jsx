@@ -25,9 +25,9 @@ const AllRoutes = () => {
             <Route path="/storyWriters/page2" element={<StoryWritersP2 />} />
             <Route path="/storyWriters/page3" element={<StoryWritersP3 />} />
             <Route path="/storyWriters/submitted" element={<StoryWriterSubmission />} />
-            <Route path="/storyTellers/page1" element={<StoryTellersP1 />} />
-            <Route path="/storyTellers/page2" element={<StoryTellersP2 />} />
-            <Route path="/storyTellers/page3" element={<StoryTellersP3 />} />
+            <Route path="/storyTellers/Page1" element={<StoryTellersP1 />} />
+            <Route path="/storyTellers/Page2" element={<StoryTellersP2 />} />
+            <Route path="/storyTellers/Page3" element={<StoryTellersP3 />} />
             <Route path="/joinStoryClub" element={<JoinStoryClub />} />
             <Route path="/apply" element={<JoinStoryClubForm />} />
             <Route path="/formSubmitted" element={<Submitted />} />

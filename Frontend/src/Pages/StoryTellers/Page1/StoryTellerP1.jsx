@@ -10,21 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function StoryTellersP1() {
-  const navigateTo = useNavigate();
-  const {activeCategory, setActiveCategory} = useContext(AuthContext)
-  const categories = [
-    "Stories about social media",
-    "Teenagers stories",
-    "College stories",
-    "Breakup Stores",
-    "Dating Stories",
-    "Gaming Stories",
-    "Sports Stories",
-    "School Stories",
-    "Artificial intelligence Stories",
-  ];
-  const h1Ref = useRef(null);
-  const h1Ref2 = useRef(null);
+var {activeCategory, setActiveCategory} = useContext(AuthContext)
   useEffect(() => {
     const spanText = (text) => {
       let string = text.innerText;
@@ -50,8 +36,30 @@ export default function StoryTellersP1() {
     }
   }, []);
 
+  // useEffect(()=>{
+  //   setActiveCategory("") 
+  // },[])
+  
+
+  const navigateTo = useNavigate();
+  console.log(activeCategory,"kkkkkkkkk");
+  const categories = [
+    "Stories about social media",
+    "Teenagers stories",
+    "College stories",
+    "Breakup Stores",
+    "Dating Stories",
+    "Gaming Stories",
+    "Sports Stories",
+    "School Stories",
+    "Artificial intelligence Stories",
+  ];
+  const h1Ref = useRef(null);
+  const h1Ref2 = useRef(null);
+  
+
   const handleNext = () => {
-    if (activeCategory !== "Slelect Category...") {
+    if (activeCategory !== "Select Category...") {
       navigateTo("/storyTellers/page2");
     } else {
       toast.error("Please select a category");
@@ -86,7 +94,7 @@ export default function StoryTellersP1() {
             mt={0}
           >
             <h1 ref={h1Ref} className={styles.animation}>
-              Have a Story to Share?
+              Have a Story to Tell?
             </h1>
             <div
               style={{

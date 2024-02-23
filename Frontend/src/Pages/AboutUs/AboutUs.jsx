@@ -303,7 +303,7 @@ const AboutUs = () => {
         </div>
 
         {/* 3rd section */}
-        <div className={styles.section3}>
+        {/* <div className={styles.section3}>
           <h1 ref={ref3} className={styles.animation}>
             Our Sucsess Stories
           </h1>
@@ -327,7 +327,7 @@ const AboutUs = () => {
           <button onClick={() => console.log("clicked")} className={styles.btn}>
             For more testimonial click here
           </button>
-        </div>
+        </div> */}
 
         {/* 4th section */}
         <div className={styles.section4}>

@@ -9,6 +9,7 @@ import { AuthContext } from "../../../Context/AuthContext";
 
 export default function StoryTellersP2() {
   const navigateTo = useNavigate();
+  
   const {storyTitle, setStoryTitle} = useContext(AuthContext)
   const h1Ref = useRef(null);
   const h1Ref2 = useRef(null);

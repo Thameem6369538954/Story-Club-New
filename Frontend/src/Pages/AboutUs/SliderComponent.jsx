@@ -68,6 +68,7 @@ export default function SliderComponent() {
             <div className={styles.cardContent}>
               <img src={mahesh} alt="mahesh" />
               <h4>Mahesh</h4>
+              
             </div>
             <div className={styles.playIcon}>
               <FaPlay />

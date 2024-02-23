@@ -1,4 +1,5 @@
 import { Box, Image, Text } from "@chakra-ui/react";
+import { Radio, RadioGroup, Stack } from "@chakra-ui/react";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { MdDownloadDone } from "react-icons/md";
@@ -7,52 +8,90 @@ import styles from "./StoryTellersP3.module.css";
 import person from "./Images/person.png";
 import fileImg from "./Images/fileImg.png";
 import { AuthContext } from "../../../Context/AuthContext";
-import axios from '../../../utils/baseUrl';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import axios from "../../../utils/baseUrl";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function StoryTellersP3() {
   const navigateTo = useNavigate();
   const h1Ref = useRef(null);
   const h1Ref2 = useRef(null);
-  const [file, setFile] = useState(null);
-  var {activeCategory,storyTitle} = useContext(AuthContext)
-  console.log({activeCategory,storyTitle});
+  var [file, setFile] = useState(null);
+  var [selectedOption, setSelectedOption] = useState("audio");
 
-  const handleFileSelect = (e) => {
-    const selectedFile = e.target.files[0];
-    if (selectedFile && isValidFileType(selectedFile)) {
-      setFile(selectedFile);
-    } else {
-      toast.error("Please select a PDF or Word file.")
-      // Clear the file input
-      e.target.value = null;
-    }
-  };
+  var { activeCategory, storyTitle,setStoryTitle,setActiveCategory } = useContext(AuthContext);
+  console.log({ activeCategory, storyTitle });
+  console.log(selectedOption,"ooii");
+
+  if(selectedOption == "audio"){
+    var handleFileSelect = (e) => {
+      const selectedFile = e.target.files[0];
+      if (selectedFile && isValidFileType(selectedFile) ) {
+        setFile(selectedFile);
+      } else {
+        toast.error("Please select a Valid file type");
+        // Clear the file input
+        e.target.value = null;
+      }
+    };
+
+    var isValidFileType = (file) => {
+      var acceptedTypes = [
+        "audio/mpeg",
+        "audio/wav",
+        "audio/mp3"
+      ];
+      return acceptedTypes.includes(file.type);
+    };
+  }else if(selectedOption=="video"){
+
+
+    var handleFileSelectVideo = (e) => {
+      const selectedFile = e.target.files[0];
+      if (selectedFile &&  isValidFileTypeVideo(selectedFile)) {
+        setFile(selectedFile);
+      } else {
+        toast.error("Please select a Valid file type");
+        // Clear the file input
+        e.target.value = null;
+      }
+    };
+    var isValidFileTypeVideo = (file) => {
+      var acceptedTypes = [
+        "video/mp4",
+        "video/mpeg",
+      ];
+      return acceptedTypes.includes(file.type);
+    };
+  }
+
+
+
 
   const handleDragOver = (e) => {
     e.preventDefault();
   };
 
+
+  const handleOptionChange = (value) => {
+    setSelectedOption(value);
+    setFile(null)
+  };
+
   const handleDrop = (e) => {
     e.preventDefault();
     const droppedFile = e.dataTransfer.files[0];
-    if (droppedFile && isValidFileType(droppedFile)) {
+    if (droppedFile && (isValidFileType(droppedFile) || isValidFileTypeVideo(droppedFile))) {
       setFile(droppedFile);
     } else {
-      alert("Please drop a PDF or Word file.");
-    
+      toast.error("Please select valid file type");
     }
   };
 
-  const isValidFileType = (file) => {
-    const acceptedTypes = [
-      "application/pdf",
-      "application/msword",
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-    ];
-    return acceptedTypes.includes(file.type);
-  };
+
+
+
+
   useEffect(() => {
     const spanText = (text) => {
       let string = text.innerText;
@@ -77,34 +116,38 @@ export default function StoryTellersP3() {
       spanText(h1Ref2.current);
     }
   }, []);
-  const handleSubmit = async() => {
+
+  var handleSubmit = async () => {
     if (!file) {
-      toast.error("Please select a PDF or Word file.")
+      toast.error("Please select a file");
       return;
     }
     //working
-    console.log(file,"this is selected file....");
+    console.log(file, "this is selected file....");
 
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("category",activeCategory)
-    formData.append('title',storyTitle)
+    formData.append("category", activeCategory);
+    formData.append("title", storyTitle);
 
-    const response =await  axios.post('/story_teller',formData,{
+    const response = await axios.post("/story_teller", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
-    })
-    console.log(response.status,".....................>>");
-    if(response.status == 200){
-      toast.success("successfully added your story")
-    }else{
-      toast.error("something went wrong!!please try again later")
+    });
+    console.log(response.status, ".....................>>");
+    if (response.status == 200) {
+      toast.success("successfully added your story");
+    } else {
+      toast.error("something went wrong!!please try again later");
     }
+
+    setStoryTitle(" ")
     setFile(null);
-    navigateTo("/");
+    setActiveCategory(" ")
 
-
+    navigateTo("/formSubmitted");
+    navigateTo("/")
   };
   return (
     <>
@@ -140,7 +183,7 @@ export default function StoryTellersP3() {
             mt={0}
           >
             <h1 ref={h1Ref} className={styles.animation}>
-              Let the World Read!
+              Let the World Listen!
             </h1>
             <div
               style={{
@@ -169,27 +212,62 @@ export default function StoryTellersP3() {
                 just one step
               </Text>
             </Box> */}
-            <Box
+            <RadioGroup defaultValue="audio"  onChange={(value) => handleOptionChange(value)}>
+              <Stack spacing={5} direction="row">
+                <Radio checked colorScheme="red" value="audio" >
+                  Audio
+                </Radio>
+                <Radio colorScheme="red" value="video">
+                  Video
+                </Radio>
+              </Stack>
+            </RadioGroup>
+
+            {selectedOption == "audio" ? (
+              <Box
               className={styles.box}
               p={4}
               onDragOver={handleDragOver}
               onDrop={handleDrop}
             >
               <Image src={fileImg} alt="file" />
-              {file && (
+              {/* {file && (
                 <Text fontSize={"1.3rem"}>Selected File: {file.name}</Text>
-              )}
+              )} */}
               {!file && (
                 <Text fontSize={"1.3rem"}>
-                  Drag & Drop a file here or click to select
+                  Choose audio file
                 </Text>
               )}
               <input
                 type="file"
                 onChange={handleFileSelect}
-                accept=".pdf,.doc,.docx"
+                accept=".mp3,.wav,.mpeg"
               />
             </Box>
+            ):(
+              <Box
+              className={styles.box}
+              p={4}
+              onDragOver={handleDragOver}
+              onDrop={handleDrop}
+            >
+              <Image src={fileImg} alt="file" />
+            
+              {!file && (
+                <Text fontSize={"1.3rem"}>
+                  Choose Video file
+                  {/* Drag & Drop a file here or click to select */}
+                </Text>
+              )}
+              <input
+                type="file"
+                onChange={handleFileSelectVideo}
+                accept=".mp4,.avi"              />
+            </Box>
+            )}
+
+            
             <Box display={"flex"} justifyContent={"space-between"}>
               <Text>03/03</Text>
               <MdDownloadDone

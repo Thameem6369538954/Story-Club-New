@@ -4,8 +4,8 @@ export const AuthContext = createContext();
 
 export default function AuthContextProvider({ children }) {
   const [position, setPosition] = useState(" ");
-  const [activeCategory, setActiveCategory] = useState("Slelect Category...");
-  const [storyTitle, setStoryTitle] = useState("");
+  var [activeCategory, setActiveCategory] = useState("Select Category");
+  var [storyTitle, setStoryTitle] = useState("");
 
 
 
