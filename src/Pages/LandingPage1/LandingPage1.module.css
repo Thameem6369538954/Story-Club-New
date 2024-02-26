@@ -4,7 +4,7 @@
 }
 .section2ContentA{
   margin: auto;
-  width: 85%;
+  width: 100%;
   flex-wrap: wrap;
 }
 /* section 1 */
@@ -86,7 +86,11 @@
     font-size: 1.25rem;
   }
 }
-
+.section2ContentA{
+  margin: auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
 .section2 {
   display: flex;
   overflow: hidden;

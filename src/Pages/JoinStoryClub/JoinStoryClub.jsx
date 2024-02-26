@@ -114,9 +114,11 @@ export default function JoinStoryClub() {
         </div>
         {/* Section 2 */}
         <Box className={styles.section2}>
+        <Box className={styles.section2ab}>
           <h1 ref={h1Ref} className={styles.animation}>
             Join Story Club!
           </h1>
+          </Box>
           <div
             style={{
               display: "flex",
