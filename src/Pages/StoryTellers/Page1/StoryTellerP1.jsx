@@ -59,7 +59,7 @@ var {activeCategory, setActiveCategory} = useContext(AuthContext)
   
 
   const handleNext = () => {
-    if (activeCategory !== "Select Category...") {
+    if (activeCategory !== "Select Category") {
       navigateTo("/storyTellers/page2");
     } else {
       toast.error("Please select a category");
@@ -117,7 +117,7 @@ var {activeCategory, setActiveCategory} = useContext(AuthContext)
               <Text
                 textAlign={"center"}
                 color={
-                  activeCategory !== "Slelect Category..." ? "black" : "gray"
+                  activeCategory !== "Select Category" ? "black" : "gray"
                 }
               >
                 {activeCategory}
@@ -136,7 +136,7 @@ var {activeCategory, setActiveCategory} = useContext(AuthContext)
                   borderRadius: "50%",
                   padding: "0.2rem",
                   display:
-                    activeCategory !== "Slelect Category..." ? "flex" : "none",
+                    activeCategory !== "Select Category" ? "flex" : "none",
                 }}
               />
             </Box>

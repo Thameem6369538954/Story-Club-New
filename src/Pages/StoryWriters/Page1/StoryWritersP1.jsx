@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import styles from "./StoryWritersP1.module.css";
 import { MdDownloadDone } from "react-icons/md";
 import { AuthContext } from "../../../Context/AuthContext";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function StoryWritersP1() {
   const navigateTo = useNavigate();
   const {activeCategory, setActiveCategory} = useContext(AuthContext)
@@ -48,10 +49,10 @@ export default function StoryWritersP1() {
   }, []);
 
   const handleNext = () => {
-    if (activeCategory !== "Slelect Category...") {
+    if (activeCategory !== "Select Category") {
       navigateTo("/storyWriters/page2");
     } else {
-      alert("Please select a category");
+      toast.error("Please select a category");
     }
   };
   return (
@@ -106,7 +107,7 @@ export default function StoryWritersP1() {
               <Text
                 textAlign={"center"}
                 color={
-                  activeCategory !== "Slelect Category..." ? "black" : "gray"
+                  activeCategory !== "Select Category" ? "black" : "gray"
                 }
               >
                 {activeCategory}
@@ -125,7 +126,7 @@ export default function StoryWritersP1() {
                   borderRadius: "50%",
                   padding: "0.2rem",
                   display:
-                    activeCategory !== "Slelect Category..." ? "flex" : "none",
+                    activeCategory !== "Select Category" ? "flex" : "none",
                 }}
               />
             </Box>

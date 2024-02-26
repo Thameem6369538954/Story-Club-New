@@ -11,6 +11,7 @@ import { RiContactsBookLine } from "react-icons/ri";
 import { HiLink } from "react-icons/hi";
 import { PiFileText } from "react-icons/pi";
 import Loading from "../../Components/Loading/Loading";
+import { toast } from "react-toastify";
 
 export default function JoinStoryClubForm() {
   const [loading, setLoading] = useState(false);
@@ -66,7 +67,7 @@ export default function JoinStoryClubForm() {
       window.scrollTo(0, 0, "smooth");
     } catch (error) {
       console.error("Email send failed:", error);
-      alert("Email send failed!");
+      toast.error("Email send failed!");
     } finally {
       setLoading(false);
     }

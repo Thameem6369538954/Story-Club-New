@@ -40,7 +40,7 @@ export default function StoryWritersP3() {
     if (droppedFile && isValidFileType(droppedFile)) {
       setFile(droppedFile);
     } else {
-      alert("Please drop a PDF or Word file.");
+      toast.error("Please drop a PDF or Word file.");
     
     }
   };

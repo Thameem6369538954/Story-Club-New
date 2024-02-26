@@ -6,6 +6,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { MdDownloadDone } from "react-icons/md";
 import person from "./Images/person.png";
 import { AuthContext } from "../../../Context/AuthContext";
+import { toast } from 'react-toastify'; // Import toast function from react-toastify
 
 export default function StoryWritersP2() {
   const navigateTo = useNavigate();
@@ -40,7 +41,7 @@ export default function StoryWritersP2() {
     if (storyTitle !== "") {
       navigateTo("/storyWriters/page3");
     } else {
-      alert("Please enter a story title");
+      toast.error("Please enter a story title");
     }
   };
   return (
