@@ -6,7 +6,8 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { MdDownloadDone } from "react-icons/md";
 import person from "./image/person.png";
 import { AuthContext } from "../../../Context/AuthContext";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function StoryTellersP2() {
   const navigateTo = useNavigate();
   
@@ -41,7 +42,7 @@ export default function StoryTellersP2() {
     if (storyTitle !== "") {
       navigateTo("/storyTellers/page3");
     } else {
-      alert("Please enter a story title");
+      toast.error("Please enter a story title");
     }
   };
   return (
