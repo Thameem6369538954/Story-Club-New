@@ -133,7 +133,7 @@ export default function Menu() {
                 _hover={{ backgroundColor: "#FAF2E7", color: "#DC6E66" }}
                 className={styles.active}
                 onClick={() => {
-                  navigateTo("/storyTellers");
+                  navigateTo("/storyWriters/page1");
                   onClose();
                 }}
               >
@@ -150,7 +150,7 @@ export default function Menu() {
                 _hover={{ backgroundColor: "#FAF2E7", color: "#DC6E66" }}
                 className={styles.active}
                 onClick={() => {
-                  navigateTo("/aboutUs");
+                  navigateTo("/storyTellers/page1");
                   onClose();
                 }}
               >

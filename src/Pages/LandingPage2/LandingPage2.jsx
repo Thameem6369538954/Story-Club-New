@@ -72,7 +72,7 @@ const LandingPage2 = () => {
               Connecting
             </h1>
             <h1 ref={h1Ref} className={styles.animation}>
-              StoryWriters and StoryTellers!
+              StoryWriters <span>and </span>StoryTellers!
             </h1>
           </div>
           <div
