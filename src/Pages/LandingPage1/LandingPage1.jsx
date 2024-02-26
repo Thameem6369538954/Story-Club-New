@@ -54,9 +54,11 @@ const LandingPage1 = () => {
         </div>
 
         <div className={styles.section2Content}>
+        <div className={styles.section2ContentA}>
           <h1 ref={h1Ref} className={styles.animation}>
-            Real People, Real Stories!
+            Real People Real Stories!
           </h1>
+        </div>
           <div
             style={{
               display: "flex",

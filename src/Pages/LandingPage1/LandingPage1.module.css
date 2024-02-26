@@ -2,7 +2,11 @@
   /* border: 1px solid red; */
   height: 87vh;
 }
-
+.section2ContentA{
+  margin: auto;
+  width: 85%;
+  flex-wrap: wrap;
+}
 /* section 1 */
 
 .section1 {
