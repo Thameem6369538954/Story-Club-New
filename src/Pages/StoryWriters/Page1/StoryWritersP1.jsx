@@ -11,15 +11,15 @@ export default function StoryWritersP1() {
   const navigateTo = useNavigate();
   const {activeCategory, setActiveCategory} = useContext(AuthContext)
   const categories = [
-    "Stories about social media",
+    "Stories about Social media",
     "Teenagers stories",
     "College stories",
-    "Breakup Stores",
+    "Breakup Stories",
     "Dating Stories",
     "Gaming Stories",
     "Sports Stories",
     "School Stories",
-    "Artificial intelligence Stories",
+    "Artificial Intelligence Stories",
   ];
   const h1Ref = useRef(null);
   const h1Ref2 = useRef(null);
