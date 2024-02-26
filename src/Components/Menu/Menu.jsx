@@ -149,12 +149,10 @@ export default function Menu() {
                 borderRadius={"0.5em"}
                 _hover={{ backgroundColor: "#FAF2E7", color: "#DC6E66" }}
                 className={styles.active}
-                // onClick={() => {
-                //   navigateTo("/storyTellers/page1");
-                //   onClose();
-                // }}
-                onClick={() => navigateTo("/storyTellers/page1")}
-
+                onClick={() => {
+                  navigateTo("/storyTellers/Page1");
+                  onClose();
+                }}
               >
                 <Heading>Our Story Club</Heading>
                 <FaArrowRight className={styles.icon} />
