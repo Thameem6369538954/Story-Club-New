@@ -16,7 +16,7 @@ export default function StoryWritersP3() {
   const h1Ref = useRef(null);
   const h1Ref2 = useRef(null);
   const [file, setFile] = useState(null);
-  var {activeCategory,storyTitle} = useContext(AuthContext)
+  var {activeCategory,setStoryTitle,storyTitle,setActiveCategory} = useContext(AuthContext)
   console.log({activeCategory,storyTitle});
 
   const handleFileSelect = (e) => {
@@ -102,7 +102,10 @@ export default function StoryWritersP3() {
       toast.error("something went wrong!!please try again later")
     }
     setFile(null);
-    navigateTo("/");
+    setStoryTitle("");
+    setActiveCategory("Select Category");
+    navigateTo("/submitted");
+    
 
 
   };

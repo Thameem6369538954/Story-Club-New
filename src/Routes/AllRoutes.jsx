@@ -24,7 +24,8 @@ const AllRoutes = () => {
             <Route path="/storyWriters/page1" element={<StoryWritersP1 />} />
             <Route path="/storyWriters/page2" element={<StoryWritersP2 />} />
             <Route path="/storyWriters/page3" element={<StoryWritersP3 />} />
-            <Route path="/storyWriters/submitted" element={<StoryWriterSubmission />} />
+            <Route path="/submitted" element={<StoryWriterSubmission />} />
+
             <Route path="/storyTellers/Page1" element={<StoryTellersP1 />} />
             <Route path="/storyTellers/Page2" element={<StoryTellersP2 />} />
             <Route path="/storyTellers/Page3" element={<StoryTellersP3 />} />

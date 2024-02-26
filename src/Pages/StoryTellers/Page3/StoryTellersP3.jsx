@@ -142,12 +142,10 @@ export default function StoryTellersP3() {
       toast.error("something went wrong!!please try again later");
     }
 
-    setStoryTitle(" ")
     setFile(null);
-    setActiveCategory(" ")
-
-    navigateTo("/formSubmitted");
-    navigateTo("/")
+    setStoryTitle("");
+    setActiveCategory("Select Category");
+    navigateTo("/submitted");
   };
   return (
     <>
