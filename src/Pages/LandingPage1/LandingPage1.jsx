@@ -3,8 +3,12 @@ import styles from "./LandingPage1.module.css";
 import { FaPlay } from "react-icons/fa";
 import left from "./Images/section2/left.png";
 import right from "./Images/section2/right.png";
-import { FiArrowRight } from "react-icons/fi";
-import { IoIosArrowForward } from "react-icons/io";
+// import { FiArrowRight } from "react-icons";
+// import { IoIosArrowForward } from "react-icons/io";
+import { TbLogin2 } from "react-icons/tb";
+import { PiTelegramLogo } from "react-icons/pi";
+import IntroductionSC from "../../Videos/IntroductionSC.mp4";
+import Triel from "../../Videos/Triel.mp4";
 
 const LandingPage1 = () => {
   const h1Ref = useRef(null);
@@ -37,14 +41,28 @@ const LandingPage1 = () => {
   }, []);
 
   return (
-    <div className={styles.landingPage1} 
-    // style={{ height: "100vh" }}
+    <div
+      className={styles.landingPage1}
+      // style={{ height: "100vh" }}
     >
       {/* section 1 */}
       <div className={styles.section1}>
-        <p>
-          Get your stories featured on Story Club in just <span>Rs 49</span>
-        </p>
+        <marquee className={styles.marquee}>
+          <div className={styles.fle}>
+            <div>
+              <p>Connect with community |</p>
+            </div>
+            <div>
+              <p>Start sharing your stories |</p>
+            </div>
+            <div>
+              <p>Welcome the recognition |</p>
+            </div>
+            <div>
+              <p>As you grow, join our featured profiles. |</p>
+            </div>
+          </div>
+        </marquee>
       </div>
 
       {/* section 2 */}
@@ -54,11 +72,11 @@ const LandingPage1 = () => {
         </div>
 
         <div className={styles.section2Content}>
-        <div className={styles.section2ContentA}>
-          <h1 ref={h1Ref} className={styles.animation}>
-            Real People Real Stories!
-          </h1>
-        </div>
+          <div className={styles.section2ContentA}>
+            <h1 ref={h1Ref} className={styles.animation}>
+              Real People! <span>Real</span> Stories!
+            </h1>
+          </div>
           <div
             style={{
               display: "flex",
@@ -74,23 +92,32 @@ const LandingPage1 = () => {
           </div>
           <p>Everybody has a Story to Tell...</p>
           <div className={styles.section2Video}>
-            <iframe
+            {/* <iframe
               title="Embedded Video"
-              src="https://drive.google.com/file/d/1pjUV9cyiHr5VJFEdd-2cz2pZPlvsrL_f/preview"
+              src=""
               // width="100%"
               // height="400"
               allow="autoplay; encrypted-media"
               allowFullScreen
-            ></iframe>
+            ></iframe> */}
+            <video controls style={{ width: "100%", borderRadius: 20 }}>
+              <source
+                src={IntroductionSC}
+                type="video/mp4"
+                autoPlay={false}
+                controls={true}
+              />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <button className={styles.btn}>
             More About Us <FaPlay />
           </button>
-          <div className={styles.slide}>
+          {/* <div className={styles.slide}>
             <h4 className={styles.icon}>Slide to the next page.</h4>
             <IoIosArrowForward className={styles.icon} />
             <IoIosArrowForward className={styles.icon} />
-          </div>
+          </div> */}
           {/* <div className={styles.section2Buttons}>
             <div className={styles.but}>
               <button>
@@ -106,6 +133,15 @@ const LandingPage1 = () => {
         </div>
         <div className={styles.right}>
           <img src={right} alt="rightImg" />
+        </div>
+      </div>
+      <div className={styles.bottomYellowBoxCon}>
+        <div className={styles.bottomYellowBox}>
+          <TbLogin2 /> <p>Publish your stories to reach millions</p>
+        </div>
+        <div className={styles.bottomYellowBox}>
+          <PiTelegramLogo />
+          <p>Publish your stories to reach millions</p>
         </div>
       </div>
     </div>

@@ -5,15 +5,16 @@ import { useNavigate } from "react-router-dom";
 import styles from "./StoryWritersP1.module.css";
 import { MdDownloadDone } from "react-icons/md";
 import { AuthContext } from "../../../Context/AuthContext";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { TiPlus } from "react-icons/ti";
 export default function StoryWritersP1() {
   const navigateTo = useNavigate();
-  const {activeCategory, setActiveCategory} = useContext(AuthContext)
+  const { activeCategory, setActiveCategory } = useContext(AuthContext);
   const categories = [
     "Stories about Social media",
-    "Teenagers Stories",
-    "College Stories",
+    "Teenagers stories",
+    "College stories",
     "Breakup Stories",
     "Dating Stories",
     "Gaming Stories",
@@ -70,7 +71,7 @@ export default function StoryWritersP1() {
           alignItems={"center"}
           p={"1rem"}
           gap={"1rem"}
-        //   border={"1px solid black"}
+          //   border={"1px solid black"}
           w={{ base: "100%", md: "100%", lg: "100%", xl: "100%" }}
           m={"auto"}
         >
@@ -106,9 +107,7 @@ export default function StoryWritersP1() {
               </b>
               <Text
                 textAlign={"center"}
-                color={
-                  activeCategory !== "Select Category" ? "black" : "gray"
-                }
+                color={activeCategory !== "Select Category" ? "black" : "gray"}
               >
                 {activeCategory}
               </Text>
@@ -167,6 +166,7 @@ export default function StoryWritersP1() {
                     border: "1px solid #DC6E66",
                   }}
                 >
+                  <TiPlus />
                   {category}
                 </Box>
               ))}

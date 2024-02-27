@@ -5,12 +5,12 @@ import { useNavigate } from "react-router-dom";
 import styles from "./StoryTellersP1.module.css";
 import { MdDownloadDone } from "react-icons/md";
 import { AuthContext } from "../../../Context/AuthContext";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { TiPlus } from "react-icons/ti";
 
 export default function StoryTellersP1() {
-var {activeCategory, setActiveCategory} = useContext(AuthContext)
+  var { activeCategory, setActiveCategory } = useContext(AuthContext);
   useEffect(() => {
     const spanText = (text) => {
       let string = text.innerText;
@@ -37,12 +37,11 @@ var {activeCategory, setActiveCategory} = useContext(AuthContext)
   }, []);
 
   // useEffect(()=>{
-  //   setActiveCategory("") 
+  //   setActiveCategory("")
   // },[])
-  
 
   const navigateTo = useNavigate();
-  console.log(activeCategory,"kkkkkkkkk");
+  console.log(activeCategory, "kkkkkkkkk");
   const categories = [
     "Stories about social media",
     "Teenagers stories",
@@ -56,7 +55,6 @@ var {activeCategory, setActiveCategory} = useContext(AuthContext)
   ];
   const h1Ref = useRef(null);
   const h1Ref2 = useRef(null);
-  
 
   const handleNext = () => {
     if (activeCategory !== "Select Category") {
@@ -80,7 +78,7 @@ var {activeCategory, setActiveCategory} = useContext(AuthContext)
           alignItems={"center"}
           p={"1rem"}
           gap={"1rem"}
-        //   border={"1px solid black"}
+          //   border={"1px solid black"}
           w={{ base: "100%", md: "100%", lg: "100%", xl: "100%" }}
           m={"auto"}
         >
@@ -116,9 +114,7 @@ var {activeCategory, setActiveCategory} = useContext(AuthContext)
               </b>
               <Text
                 textAlign={"center"}
-                color={
-                  activeCategory !== "Select Category" ? "black" : "gray"
-                }
+                color={activeCategory !== "Select Category" ? "black" : "gray"}
               >
                 {activeCategory}
               </Text>
@@ -177,6 +173,7 @@ var {activeCategory, setActiveCategory} = useContext(AuthContext)
                     border: "1px solid #DC6E66",
                   }}
                 >
+                  <TiPlus />
                   {category}
                 </Box>
               ))}

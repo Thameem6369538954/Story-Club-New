@@ -2,14 +2,62 @@
   /* border: 1px solid red; */
   height: 87vh;
 }
-.section2ContentA{
+.section2ContentA {
   margin: auto;
   width: 100%;
   flex-wrap: wrap;
 }
+.bottomYellowBoxCon {
+  display: flex;
+  margin: 1%;
+}
+.bottomYellowBox {
+  background-color: #f5c365;
+  width: 40%;
+  margin: auto;
+  padding: 30px;
+  border-radius: 6px;
+  border: 2px dashed black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 25px;
+}
+.fle {
+  display: flex;
+  /* background-color: red; */
+  align-items: center;
+  justify-content: space-around;
+}
+/* .marquee {
+  background-color: #000000;
+} */
 /* section 1 */
-
 .section1 {
+  width: 60%;
+  background-color: #f5c365;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3% auto;
+}
+.section1Content {
+  display: flex;
+  justify-content: center;
+}
+
+.section1Content p {
+  border-right: 1px solid black;
+  padding: 0 1.5rem;
+}
+.section1Content p:nth-last-child(1) {
+  border-right: none;
+}
+
+/* .section1 {
   width: 60%;
   background-color: #f5c365;
   padding: 0.1rem;
@@ -20,7 +68,7 @@
 }
 .section1 span {
   font-weight: bold;
-}
+} */
 
 /* section 2 */
 /* CSS */
@@ -86,7 +134,7 @@
     font-size: 1.25rem;
   }
 }
-.section2ContentA{
+.section2ContentA {
   margin: auto;
   width: 100%;
   flex-wrap: wrap;
@@ -282,6 +330,19 @@ a:hover::after {
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
+  .bottomYellowBox {
+    background-color: #f5c365;
+    width: 46%;
+    margin: auto;
+    padding: 9px;
+    border-radius: 6px;
+    border: 2px dashed black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 25px;
+  }
   /* .section2 {
     border: 1px solid black;
   } */
@@ -294,7 +355,8 @@ a:hover::after {
   }
 
   .section2Content h1 {
-    font-size: 2.2rem;
+    font-size: 33px;
+    /* background-color: red; */
   }
 
   .section2Content p {
@@ -347,8 +409,43 @@ a:hover::after {
 }
 
 @media all and (max-width: 767px) {
+  .landingPage1 {
+    height: 70vh;
+  }
   .section1 {
-    width: 100%;
+    width: 60%;
+    background-color: #f5c365;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16% auto;
+  }
+  .andingPage1 {
+    height: 66vh;
+  }
+  .bottomYellowBoxCon {
+    display: none;
+    /* margin: -1% auto; */
+    background-color: #dc6e66;
+    height: 40%;
+  }
+  .bottomYellowBox {
+    background-color: #f5c365;
+    width: 40%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 6px;
+    border: 2px dashed black;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 25px;
+  }
+  .section1 {
+    width: 80%;
   }
   .section1 p {
     font-size: 0.8rem;
@@ -357,10 +454,13 @@ a:hover::after {
     width: 90%;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
+    margin-top: -11px;
   }
   .section2Content h1 {
     font-size: 2.5rem;
+    margin-top: 20px;
+    padding: 26px;
   }
   .section2Content button {
     width: 70%;
@@ -375,6 +475,7 @@ a:hover::after {
     display: none;
   }
   .section2Buttons {
+    margin-top: 20px;
     gap: 1;
   }
   .but {

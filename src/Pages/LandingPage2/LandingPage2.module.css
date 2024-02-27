@@ -1,17 +1,37 @@
 .landingPage2 {
   /* border: 1px solid red; */
-  height: 87vh;
+  height: 10 0vh;
+  margin-top: 2%;
+  background-color: #dc6e66;
 }
-
+.bottomYellowBoxCon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.bottomYellowBox {
+  margin: auto;
+  background-color: #f5c365;
+  /* width: 40%; */
+  padding: 30px;
+  border-radius: 6px;
+  border: 2px dashed black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 25px;
+}
 /* section 1 */
 .section1 {
   width: 60%;
   background-color: #f5c365;
-  padding: 0.1rem;
+  padding: 10px;
+  border-radius: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 0% auto;
 }
 .section1Content {
   display: flex;
@@ -90,10 +110,20 @@
     font-size: 1.25rem;
   }
 }
+.bottomYellowBoxCon {
+  display: flex;
+  /* flex-direction: column; */
+  margin: -1% auto;
+  background-color: #dc6e66;
+  height: 40%;
+  margin-top: 50px;
+  padding: 20px;
+}
 .section2 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 15%;
 }
 
 .section2Content {
@@ -189,7 +219,8 @@ a:hover::after {
 .section2Images {
   display: flex;
   justify-content: space-between;
-  margin-top: -6rem;
+  margin-top: -10rem;
+  /* border: 1px solid black; */
 }
 .left {
   width: 40%;
@@ -209,10 +240,39 @@ a:hover::after {
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
+  .section2Content h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Rakkas;
+    font-size: 30px;
+    letter-spacing: 0.2rem;
+    color: #333;
+    margin-top: 30px;
+  }
+  .bottomYellowBox {
+    margin: auto;
+    background-color: #f5c365;
+    width: 47%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px dashed black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 25px;
+  }
+  .section2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1%;
+  }
   /* section 1 */
   .section1 {
     width: 100%;
     margin-bottom: 1rem;
+    margin-top: 20px;
   }
 
   /* section 2 */
@@ -230,7 +290,24 @@ a:hover::after {
   }
 }
 @media all and (max-width: 767px) {
-  
+  .bottomYellowBoxCon {
+    display: none;
+  }
+  .section2Content h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Rakkas;
+    font-size: 30px;
+    letter-spacing: 0.2rem;
+    color: #333;
+    margin: 10px;
+  }
+  .landingPage2 {
+    /* border: 1px solid red; */
+    height: 95vh;
+    margin-top: 2%;
+    background-color: #dc6e66;
+  }
   /* section 1 */
   .section1 {
     width: 100%;
@@ -243,6 +320,8 @@ a:hover::after {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    margin-top: 20%;
+    padding: 20px;
   }
   .section2Buttons {
     gap: 1.5rem;
@@ -251,7 +330,15 @@ a:hover::after {
     width: 60%;
   }
   .section2Images {
-    margin-top: -4rem;
-    display: none;
+    margin-top: -1rem;
+    width: 100%;
+    display: flex;
+  }
+  .left {
+    width: 220%;
+  }
+  .right {
+    position: absolute;
+    width: 100%;
   }
 }

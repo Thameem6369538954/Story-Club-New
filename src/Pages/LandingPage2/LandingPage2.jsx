@@ -3,6 +3,10 @@ import styles from "./LandingPage2.module.css";
 import left from "./Images/section2/left.png";
 import right from "./Images/section2/right.png";
 import { useNavigate } from "react-router-dom";
+import { RiContactsBookLine } from "react-icons/ri";
+import { AiOutlineMessage } from "react-icons/ai";
+import { TbLogin2 } from "react-icons/tb";
+import { PiTelegramLogo } from "react-icons/pi";
 
 const LandingPage2 = () => {
   const navigateTo = useNavigate();
@@ -47,23 +51,19 @@ const LandingPage2 = () => {
   return (
     <div className={styles.landingPage2}>
       {/* section 1 */}
-      <div className={styles.section1}>
-        <marquee
-          behavior="scroll"
-          direction="left"
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
-          ref={marqueeRef}
-        >
-          <div className={styles.section1Content}>
-            <p>Connect width community</p>
-            <p>Start sharing your Stories</p>
-            <p>Welcome the recognition</p>
-            <p>As you grow, join our featured projiles.</p>
-          </div>
-        </marquee>
-      </div>
 
+      {/* <div className={styles.section4}>
+        <div className={styles.publish}>
+          <LuSend />
+          <p>Publish your stories to reach millions</p>
+        </div>
+        <div className={styles.publish}>
+          <TbLogin2 />
+          <p>
+            Get access to our stories rs 49 <sub> / month*</sub>
+          </p>
+        </div>
+      </div> */}
       {/* section 2 */}
       <div className={styles.section2}>
         <div className={styles.section2Content}>
@@ -75,10 +75,10 @@ const LandingPage2 = () => {
               
             </h1> */}
             <h1 ref={h1Ref} className={styles.animation}>
-            StoryWriters and
+              StoryWriters and
             </h1>
             <h1 ref={h1Ref} className={styles.animation}>
-           StoryTellers!
+              StoryTellers!
             </h1>
           </div>
           <div
@@ -117,6 +117,15 @@ const LandingPage2 = () => {
           <div className={styles.right}>
             <img src={right} alt="rightImg" />
           </div>
+        </div>
+      </div>
+      <div className={styles.bottomYellowBoxCon}>
+        <div className={styles.bottomYellowBox}>
+          <TbLogin2 /> <p>Publish your stories to reach millions</p>
+        </div>
+        <div className={styles.bottomYellowBox}>
+          <PiTelegramLogo />
+          <p>Publish your stories to reach millions</p>
         </div>
       </div>
     </div>

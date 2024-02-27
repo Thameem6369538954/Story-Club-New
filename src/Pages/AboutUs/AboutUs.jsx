@@ -11,6 +11,8 @@ import dhanashekar from "./Images/section2/dhanashekar.jpeg";
 import dhinesh from "./Images/section2/dhinesh.jpeg";
 import harris from "./Images/section2/harris.jpeg";
 import shankar from "./Images/section2/shankar.jpeg";
+import ifrah from "../../Images/ifrah.jpg";
+import sabeen from "../../Images/sabeen.jpg";
 import yashavantha from "./Images/section2/yashavantha.jpeg";
 import styles from "./AboutUs.module.css";
 import { FaPlay } from "react-icons/fa";
@@ -32,9 +34,10 @@ import { Box, Heading } from "@chakra-ui/react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Navigate, useNavigate } from "react-router-dom";
 import Footer from "../../Footer/Footer";
-import axios from '../../utils/baseUrl'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import axios from "../../utils/baseUrl";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import AbutVideo from "../../Videos/AbutVideo.mp4";
 
 const AboutUs = () => {
   const navigateTo = useNavigate();
@@ -96,7 +99,7 @@ const AboutUs = () => {
     },
     {
       id: 3,
-      name: "Joice Lincey",
+      name: "Joice Lincy",
       position: "Digital Marketing specialist",
       image: joice,
     },
@@ -114,7 +117,7 @@ const AboutUs = () => {
     },
     {
       id: 6,
-      name: "Dhanashekar",
+      name: "Dhanasekar",
       position: "Sketch Artist",
       image: dhanashekar,
     },
@@ -132,15 +135,21 @@ const AboutUs = () => {
     },
     {
       id: 9,
-      name: "Shankar",
+      name: "Sankar",
       position: "Illustrator",
       image: shankar,
     },
     {
       id: 10,
-      name: "Yashavantha",
-      position: "Frontend Developer",
-      image: yashavantha,
+      name: "Sabeen",
+      position: "Ui/UX Designer",
+      image: sabeen,
+    },
+    {
+      id: 10,
+      name: "Ifrah Naz",
+      position: "Video Editor",
+      image: ifrah,
     },
   ];
   const NextArrow = ({ onClick }) => (
@@ -202,21 +211,21 @@ const AboutUs = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  const handleSubmit =async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("clicked");
-    console.log(formData,"daaaaataas");
+    console.log(formData, "daaaaataas");
     try {
-      const response = await axios.post('/get_in_touch',formData)
-      console.log(response,"oooomb");
-      const msg =response.data.message
-      if(response.status ==200){
-        toast.success(msg)
-      }else{
-        toast.error(msg)
+      const response = await axios.post("/get_in_touch", formData);
+      console.log(response, "oooomb");
+      const msg = response.data.message;
+      if (response.status == 200) {
+        toast.success(msg);
+      } else {
+        toast.error(msg);
       }
 
-      navigateTo("/")
+      navigateTo("/");
     } catch (error) {
       console.log(error);
     }
@@ -251,7 +260,18 @@ const AboutUs = () => {
               <p>-----</p>
               <p style={{ color: "red" }}>-</p>
             </div>
-            <img src={middleImg} alt="middleImg" />
+            <video
+              controls
+              style={{ width: "100%", borderRadius: 20, margin: "auto" }}
+            >
+              <source
+                src={AbutVideo}
+                type="video/mp4"
+                autoPlay={false}
+                controls={true}
+              />
+              Your browser does not support the video tag.
+            </video>
             <button
               onClick={() => console.log("clicked")}
               className={styles.btn}
@@ -303,7 +323,7 @@ const AboutUs = () => {
         </div>
 
         {/* 3rd section */}
-        {/* <div className={styles.section3}>
+        <div className={styles.section3}>
           <h1 ref={ref3} className={styles.animation}>
             Our Sucsess Stories
           </h1>
@@ -327,7 +347,7 @@ const AboutUs = () => {
           <button onClick={() => console.log("clicked")} className={styles.btn}>
             For more testimonial click here
           </button>
-        </div> */}
+        </div>
 
         {/* 4th section */}
         <div className={styles.section4}>

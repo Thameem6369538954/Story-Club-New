@@ -9,6 +9,7 @@ import anchor from "./Images/anchor.png";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../Footer/Footer";
+import Hiring from "../../Videos/Hiring.mp4";
 export default function JoinStoryClub() {
   const marqueeRef = useRef(null);
   const h1Ref = useRef(null);
@@ -52,7 +53,6 @@ export default function JoinStoryClub() {
     //   jd: "We are currently seeking a Backend Developer to join our dynamic team. This individual will play avital role enabling the development of e-commerce, managing databases, assisting in podcas creation and supporting YouTube channel content. The ideal candidate will have an extensive experience of working with full Stack MERN and managing MongoDB databases",
     //   image: require("../Images/blogprev2.png"),
     // },
-    //ggggg
   ];
   const handleMouseOver = () => {
     marqueeRef.current.stop();
@@ -115,10 +115,10 @@ export default function JoinStoryClub() {
         </div>
         {/* Section 2 */}
         <Box className={styles.section2}>
-        <Box className={styles.section2ab}>
-          <h1 ref={h1Ref} className={styles.animation}>
-            Join Story Club!
-          </h1>
+          <Box className={styles.section2ab}>
+            <h1 ref={h1Ref} className={styles.animation}>
+              Join Story Club!
+            </h1>
           </Box>
           <div
             style={{
@@ -139,14 +139,18 @@ export default function JoinStoryClub() {
           minim
         </Text> */}
           <Box className={styles.section2Video}>
-            <iframe
-              title="Embedded Video"
-              src="https://www.youtube.com/embed/fIY5Fd1klNM?si=K7ZvJ7CcD_pY77sV"
-              // width="100%"
-              // height="400"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-            ></iframe>
+            <video
+              controls
+              style={{ width: "100%", borderRadius: 20, margin: "auto" }}
+            >
+              <source
+                src={Hiring}
+                type="video/mp4"
+                autoPlay={false}
+                controls={true}
+              />
+              Your browser does not support the video tag.
+            </video>
           </Box>
           <Box
             display={"grid"}
