@@ -12,8 +12,8 @@ export default function StoryWritersP1() {
   const {activeCategory, setActiveCategory} = useContext(AuthContext)
   const categories = [
     "Stories about Social media",
-    "Teenagers stories",
-    "College stories",
+    "Teenagers Stories",
+    "College Stories",
     "Breakup Stories",
     "Dating Stories",
     "Gaming Stories",

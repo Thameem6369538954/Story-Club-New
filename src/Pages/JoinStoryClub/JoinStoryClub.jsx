@@ -52,6 +52,7 @@ export default function JoinStoryClub() {
     //   jd: "We are currently seeking a Backend Developer to join our dynamic team. This individual will play avital role enabling the development of e-commerce, managing databases, assisting in podcas creation and supporting YouTube channel content. The ideal candidate will have an extensive experience of working with full Stack MERN and managing MongoDB databases",
     //   image: require("../Images/blogprev2.png"),
     // },
+    //ggggg
   ];
   const handleMouseOver = () => {
     marqueeRef.current.stop();
