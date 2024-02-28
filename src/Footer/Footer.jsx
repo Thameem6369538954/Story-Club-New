@@ -12,11 +12,11 @@ export default function Footer() {
   const [formData, setFormData] = useState({
     email: "",
   });
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     console.log(formData,'kk');
     try {
-      const response = axios.post('/subscription',{email:formData.email})
+      const response =await  axios.post('/subscription',{email:formData.email})
       console.log(response,"oooiii");
       // Assuming 'response' is your response object
       toast.success("successfully subscribed!!")
