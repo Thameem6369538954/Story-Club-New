@@ -89,6 +89,8 @@
   position: relative;
   text-align: center;
   text-decoration: none #000000 solid;
+
+  /* ll */
   text-decoration-thickness: auto;
   width: 60%;
   max-width: 460px;
