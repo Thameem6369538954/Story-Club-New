@@ -7,48 +7,78 @@ const VideoPoster = () => {
   const [poster, setPotster] = useState([
     {
       id: 1,
-      title: "a Little boy",
+      title: "INTRODUCTION OF STORY CLUB",
       discription: "a little boy changing his life",
       source: IntroductionSC,
     },
     {
       id: 2,
-      title: "A Little boy",
+      title: "STORY CLUB IS HIRING",
       discription: "a little boy changing his life",
       source: IntroductionSC,
     },
     {
       id: 3,
-      title: "A Little boy",
+      title: "WRITE YOUR STORY",
       discription: "a little boy changing his life",
       source: IntroductionSC,
     },
     {
       id: 4,
-      title: "A Little boy",
+      title: "TELL YOUR STORY",
       discription: "a little boy changing his life",
       source: IntroductionSC,
     },
     {
       id: 5,
-      title: "A Little boy",
+      title: "FLASHBACK",
       discription: "a little boy changing his life",
       source: IntroductionSC,
     },
   ]);
 
   const settings = {
-    className: "center",
-    infinite: true,
-    centerPadding: "60px",
     slidesToShow: 3,
-    swipeToSlide: true,
-    afterChange: function (index) {
-      console.log(
-        `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-      );
-    },
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 380,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplaySpeed: 3000,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplaySpeed: 3000,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          autoplaySpeed: 3000,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplaySpeed: 3000,
+        },
+      },
+    ],
   };
+
 
   return (
     <div className={Styles.VideoPosterMain}>
