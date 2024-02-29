@@ -472,7 +472,8 @@ a:hover::after {
     width: 70%;
   }
   .section2Video {
-    display: none;
+    display: flex;
+    width: 100%;
   }
   .left {
     display: none;
