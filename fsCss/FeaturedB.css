@@ -1,0 +1,93 @@
+.video-part{
+
+}
+.video-part-flx{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.video-part-flx img{
+    width: 60%;
+}
+.video-part-flx h3{
+    margin-bottom: 20px;
+    font-size: large;
+}
+.formet-feat{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.like-lines{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    /* margin-left: 120px; */
+    margin-top: 20px;
+}
+.like-lines li{
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+}
+.vid-text{
+    width: 30%;
+}
+.video-text-part p{
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.eye-icon{
+    color: #49883A;
+}
+.commed-icon{
+    color: #50A7BD;
+}
+.like-icon{
+    color: #DC6E66;
+}
+.video-text-part button{
+    padding:10px;
+    background-color: #DC6E6633;
+    border: 2px solid black;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.featuredc-list{
+    width: 20%;
+    display: flex;
+}
+.featuredc-list h2{
+    font-size: 16px;
+}
+.featur-video-box img{
+    width: 500%;
+}
+
+.featur-video-box{
+    margin: 10px;
+   border-radius: 10px;
+    background-color: #fcf7f1;
+    flex-wrap: wrap;
+    width: 300px;
+    box-shadow: 14px 13px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+.featuredc-list{
+    width: 100%;
+}
+.suggest-box{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+
+}
+.full-sugges-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex-direction: row;
+}

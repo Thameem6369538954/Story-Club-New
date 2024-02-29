@@ -9,6 +9,7 @@ import { TbLogin2 } from "react-icons/tb";
 import { PiTelegramLogo } from "react-icons/pi";
 import IntroductionSC from "../../Videos/IntroductionSC.mp4";
 import Triel from "../../Videos/Triel.mp4";
+import VideoPoster from "../../Components/VideoPoster/VideoPoster";
 
 const LandingPage1 = () => {
   const h1Ref = useRef(null);
@@ -86,11 +87,11 @@ const LandingPage1 = () => {
               marginTop: "-1rem",
             }}
           >
-            <p style={{ color: "red" }}>-</p>
-            <p>-----</p>
-            <p style={{ color: "red" }}>-</p>
+            {/* <p style={{ color: "red" }}>-</p> */}
+            {/* <p>-----</p> */}
+            {/* <p style={{ color: "red" }}>-</p> */}
           </div>
-          <p>Everybody has a Story to Tell...</p>
+          {/* <p>Everybody has a Story to Tell...</p> */}
           <div className={styles.section2Video}>
             {/* <iframe
               title="Embedded Video"
@@ -100,7 +101,7 @@ const LandingPage1 = () => {
               allow="autoplay; encrypted-media"
               allowFullScreen
             ></iframe> */}
-            <video controls style={{ width: "100%", borderRadius: 20 }}>
+            <video controls style={{ width: "100%", borderRadius: 20,marginTop:" 150px" }}>
               <source
                 src={IntroductionSC}
                 type="video/mp4"
@@ -110,9 +111,14 @@ const LandingPage1 = () => {
               Your browser does not support the video tag.
             </video>
           </div>
-          <button className={styles.btn}>
+
+
+{/* <div>freeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</div> */}
+
+{/* <VideoPoster /> */}
+          {/* <button className={styles.btn}>
             More About Us <FaPlay />
-          </button>
+          </button> */}
           {/* <div className={styles.slide}>
             <h4 className={styles.icon}>Slide to the next page.</h4>
             <IoIosArrowForward className={styles.icon} />
@@ -135,7 +141,7 @@ const LandingPage1 = () => {
           <img src={right} alt="rightImg" />
         </div>
       </div>
-      <div className={styles.bottomYellowBoxCon}>
+      {/* <div className={styles.bottomYellowBoxCon}>
         <div className={styles.bottomYellowBox}>
           <TbLogin2 /> <p>Publish your stories to reach millions</p>
         </div>
@@ -143,7 +149,7 @@ const LandingPage1 = () => {
           <PiTelegramLogo />
           <p>Publish your stories to reach millions</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

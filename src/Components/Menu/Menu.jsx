@@ -175,6 +175,24 @@ export default function Menu() {
                 <FaArrowRight className={styles.icon} />
               </Center>
 
+              <Center
+                display={"flex"}
+                justifyContent={"space-between"}
+                width={{ base: "100%", md: "60%", lg: "85%", xl: "70%" }}
+                borderBottom={"2px solid #DC6E66"}
+                p={"0.3em"}
+                borderRadius={"0.5em"}
+                _hover={{ backgroundColor: "#FAF2E7", color: "#DC6E66" }}
+                className={styles.active}
+                onClick={() => {
+                  navigateTo("/featuredStories");
+                  onClose();
+                }}
+              >
+                <Heading>Featured Stories</Heading>
+                <FaArrowRight className={styles.icon} />
+              </Center>
+
               {/* <Center
                 color={"black"}
                 display={"flex"}

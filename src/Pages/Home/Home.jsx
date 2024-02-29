@@ -6,6 +6,7 @@ import styles from "./Home.module.css"; // Import the module CSS
 import LandingPage1 from "../LandingPage1/LandingPage1";
 import LandingPage2 from "../LandingPage2/LandingPage2";
 import Footer from "./../../Footer/Footer";
+import Landingpage3 from "../LandingPage3/Landingpage3";
 
 const Home = () => {
   const sliderRef = useRef(null);
@@ -39,7 +40,8 @@ const Home = () => {
   return (
     <div className={styles.sliderWrapper} onWheel={handleMouseWheel}>
       <LandingPage1 />
-      <LandingPage2 />
+      <Landingpage3 />
+      {/* <LandingPage2 /> */}
       {/* <Footer /> */}
     </div>
   );

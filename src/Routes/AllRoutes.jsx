@@ -16,10 +16,13 @@ import StoryWriterSubmission from "../Pages/StoryWriters/Submitted/StoryWriterSu
 import StoryTellersP1 from "../Pages/StoryTellers/Page1/StoryTellerP1"
 import StoryTellersP2 from "../Pages/StoryTellers/Page2/StoryTellersP2"
 import StoryTellersP3 from "../Pages/StoryTellers/Page3/StoryTellersP3"
+import LandingPage2 from "../Pages/LandingPage2/LandingPage2"
+import FeaturedStories from '../Pages/FeaturedStrories/FeaturedStories'
 const AllRoutes = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/LandingPage2" element={<LandingPage2 />} />
             <Route path="/aboutUs" element={<AboutUs />} />
             <Route path="/storyWriters/page1" element={<StoryWritersP1 />} />
             <Route path="/storyWriters/page2" element={<StoryWritersP2 />} />
@@ -32,6 +35,7 @@ const AllRoutes = () => {
             <Route path="/joinStoryClub" element={<JoinStoryClub />} />
             <Route path="/apply" element={<JoinStoryClubForm />} />
             <Route path="/formSubmitted" element={<Submitted />} />
+            <Route path="/featuredStories" element={<FeaturedStories/>}/>
         </Routes>
     );
 }
