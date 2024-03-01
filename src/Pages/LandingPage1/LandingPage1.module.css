@@ -335,6 +335,22 @@ a:hover::after {
   margin-right: 0.5rem;
 }
 
+
+
+
+.animation {
+  font-size: 8rem; /* Adjust the font size as needed */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .animation {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+}
+
+
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .bottomYellowBox {
     background-color: #f5c365;

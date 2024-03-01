@@ -119,7 +119,7 @@ const LandingPage2 = () => {
           </div>
         </div>
       </div>
-      <div className={styles.bottomYellowBoxCon}>
+      {/* <div className={styles.bottomYellowBoxCon}>
         <div className={styles.bottomYellowBox}>
           <TbLogin2 /> <p>Publish your stories to reach millions</p>
         </div>
@@ -127,7 +127,7 @@ const LandingPage2 = () => {
           <PiTelegramLogo />
           <p>Publish your stories to reach millions</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

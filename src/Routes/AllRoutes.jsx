@@ -17,6 +17,7 @@ import StoryTellersP1 from "../Pages/StoryTellers/Page1/StoryTellerP1"
 import StoryTellersP2 from "../Pages/StoryTellers/Page2/StoryTellersP2"
 import StoryTellersP3 from "../Pages/StoryTellers/Page3/StoryTellersP3"
 import LandingPage2 from "../Pages/LandingPage2/LandingPage2"
+import Landingpage3 from "../Pages/LandingPage3/Landingpage3";
 import FeaturedStories from '../Pages/FeaturedStrories/FeaturedStories'
 const AllRoutes = () => {
     return (
@@ -35,7 +36,7 @@ const AllRoutes = () => {
             <Route path="/joinStoryClub" element={<JoinStoryClub />} />
             <Route path="/apply" element={<JoinStoryClubForm />} />
             <Route path="/formSubmitted" element={<Submitted />} />
-            <Route path="/featuredStories" element={<FeaturedStories/>}/>
+            <Route path="/featuredStories" element={<Landingpage3/>}/>
         </Routes>
     );
 }
