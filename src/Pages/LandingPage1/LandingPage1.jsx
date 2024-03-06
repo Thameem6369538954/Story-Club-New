@@ -251,7 +251,8 @@ const LandingPage1 = () => {
         <div className={styles.section2Content}>
           <div className={styles.section2ContentA}>
             <h1 ref={h1Ref} className={styles.animation}>
-              Real People! <span>Real</span> Stories!
+              Real People!
+              <span>Real</span> Stories!
             </h1>
           </div>
           <div
