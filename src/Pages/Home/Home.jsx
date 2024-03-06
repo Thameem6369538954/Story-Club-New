@@ -22,9 +22,8 @@ const Home = () => {
   };
 
   // useEffect(() => {
-    
+
   // }, [])
-  
 
   // const settings = {
   //   dots: true,
@@ -45,8 +44,8 @@ const Home = () => {
   return (
     <div className={styles.sliderWrapper} onWheel={handleMouseWheel}>
       <LandingPage1 />
-      <Landingpage3 />
-      {/* <LandingPage2 /> */}
+      {/* <Landingpage3 /> */}
+      <LandingPage2 />
       {/* <Footer /> */}
     </div>
   );

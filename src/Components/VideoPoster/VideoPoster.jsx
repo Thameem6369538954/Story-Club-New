@@ -79,7 +79,6 @@ const VideoPoster = () => {
     ],
   };
 
-
   return (
     <div className={Styles.VideoPosterMain}>
       <div className="slider-container">
@@ -87,16 +86,24 @@ const VideoPoster = () => {
           {poster.map((items) => {
             return (
               <div className={Styles.posterVidio} key={items.id}>
-                <video style={{ width:"70%", borderRadius: 20,marginLeft:"22%" }} controls>
-                  <source
-                    src={items.source}
-                    type="video/mp4"
-                    autoPlay={false}
-                    controls={true}
-                  />
-                  Your browser does not support the video tag.
-                </video>
-                <p>{items.title}</p>
+                <div className={Styles.videoBox}>
+                  <video
+                    style={{
+                      width: "80%",
+                      borderRadius: 20,
+                    }}
+                    controls
+                  >
+                    <source
+                      src={items.source}
+                      type="video/mp4"
+                      autoPlay={false}
+                      controls={true}
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                  <p>{items.title}</p>
+                </div>
               </div>
             );
           })}

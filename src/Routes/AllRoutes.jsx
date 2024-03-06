@@ -19,25 +19,27 @@ import StoryTellersP3 from "../Pages/StoryTellers/Page3/StoryTellersP3"
 import LandingPage2 from "../Pages/LandingPage2/LandingPage2"
 import Landingpage3 from "../Pages/LandingPage3/Landingpage3";
 import FeaturedStories from '../Pages/FeaturedStrories/FeaturedStories'
+import Podcast from "../Pages/Poscast/Podcast";
 const AllRoutes = () => {
     return (
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/LandingPage2" element={<LandingPage2 />} />
-            <Route path="/aboutUs" element={<AboutUs />} />
-            <Route path="/storyWriters/page1" element={<StoryWritersP1 />} />
-            <Route path="/storyWriters/page2" element={<StoryWritersP2 />} />
-            <Route path="/storyWriters/page3" element={<StoryWritersP3 />} />
-            <Route path="/submitted" element={<StoryWriterSubmission />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Podcast" element={<Podcast />} />
+        <Route path="/LandingPage2" element={<LandingPage2 />} />
+        <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/storyWriters/page1" element={<StoryWritersP1 />} />
+        <Route path="/storyWriters/page2" element={<StoryWritersP2 />} />
+        <Route path="/storyWriters/page3" element={<StoryWritersP3 />} />
+        <Route path="/submitted" element={<StoryWriterSubmission />} />
 
-            <Route path="/storyTellers/Page1" element={<StoryTellersP1 />} />
-            <Route path="/storyTellers/Page2" element={<StoryTellersP2 />} />
-            <Route path="/storyTellers/Page3" element={<StoryTellersP3 />} />
-            <Route path="/joinStoryClub" element={<JoinStoryClub />} />
-            <Route path="/apply" element={<JoinStoryClubForm />} />
-            <Route path="/formSubmitted" element={<Submitted />} />
-            <Route path="/featuredStories" element={<Landingpage3/>}/>
-        </Routes>
+        <Route path="/storyTellers/Page1" element={<StoryTellersP1 />} />
+        <Route path="/storyTellers/Page2" element={<StoryTellersP2 />} />
+        <Route path="/storyTellers/Page3" element={<StoryTellersP3 />} />
+        <Route path="/joinStoryClub" element={<JoinStoryClub />} />
+        <Route path="/apply" element={<JoinStoryClubForm />} />
+        <Route path="/formSubmitted" element={<Submitted />} />
+        <Route path="/featuredStories" element={<Landingpage3 />} />
+      </Routes>
     );
 }
 

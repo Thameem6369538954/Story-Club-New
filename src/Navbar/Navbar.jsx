@@ -3,6 +3,7 @@ import React from "react";
 import logo from "./Images/logo.png";
 import Menu from "../Components/Menu/Menu";
 import { useNavigate } from "react-router-dom";
+import Background from "../Images/Background.png";
 
 export default function Navbar() {
   const navigateTo = useNavigate();
@@ -15,7 +16,8 @@ export default function Navbar() {
       top={0}
       zIndex={999}
       //   border={"1px solid black"}
-      backgroundColor={"white"}
+      // backgroundColor={"white"}
+      backgroundImage={Background}
       boxShadow={
         "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px"
       }

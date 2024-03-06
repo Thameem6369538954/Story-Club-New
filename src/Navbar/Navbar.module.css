@@ -1,0 +1,8 @@
+.navbar {
+  background-image: url("../../Images/Background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 180vh; */
+  width: 100%;
+}

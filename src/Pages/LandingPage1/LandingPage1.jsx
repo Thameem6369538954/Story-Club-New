@@ -112,7 +112,6 @@
 //             </video>
 //           </div>
 
-
 // {/* <div>freeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</div> */}
 
 // {/* <VideoPoster /> */}
@@ -155,7 +154,6 @@
 // };
 
 // export default LandingPage1;
-
 
 import React, { useEffect, useRef } from "react";
 import styles from "./LandingPage1.module.css";
@@ -203,21 +201,21 @@ const LandingPage1 = () => {
     const spanText = (text) => {
       let words = text.innerText.split(" ");
       console.log(words); // Log the words array to check the output
-      let spanned = words.map((word, index) => <span key={index}>${word}</span>).join(" "); // Added key prop
+      let spanned = words
+        .map((word, index) => <span key={index}>${word}</span>)
+        .join(" "); // Added key prop
       text.innerHTML = spanned;
-  
+
       let animations = text.querySelectorAll("span");
       animations.forEach((word, i) => {
         word.style.animationDelay = i * 0.1 + "s";
       });
     };
-  
+
     // if (h1Ref.current) {
     //   spanText(h1Ref.current);
     // }
   }, []);
-  
-  
 
   return (
     <div
@@ -296,9 +294,12 @@ const LandingPage1 = () => {
           {/* <div>freeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</div> */}
 
           {/* <VideoPoster /> */}
-          {/* <button className={styles.btn}>
+          <div className={styles.btnContainer}>
+
+          <button className={styles.btn}>
             More About Us <FaPlay />
-          </button> */}
+          </button>
+          </div>
           {/* <div className={styles.slide}>
             <h4 className={styles.icon}>Slide to the next page.</h4>
             <IoIosArrowForward className={styles.icon} />
