@@ -57,13 +57,13 @@
 }
 .vidul li {
   color: #5f6568;
-  font-family: "Anton", sans-serif;
+  padding: 20px;
   font-weight: 10;
   font-style: normal;
 }
 .Like li {
   color: #5f6568;
-  font-family: "Anton", sans-serif;
+  padding: 20px;
   font-weight: 10;
   font-style: normal;
   list-style: none;

@@ -1,10 +1,6 @@
-
-
-
-
 .landingPage2 {
   /* border: 1px solid red; */
-  height: 10 0vh;
+  height: 96vh;
   margin-top: 2%;
   background-color: #dc6e66;
 }
@@ -245,6 +241,12 @@ a:hover::after {
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
+  .landingPage2 {
+    /* border: 1px solid red; */
+    height: 96vh;
+    margin-top: 2%;
+    background-color: #dc6e66;
+  }
   .section2Content h1 {
     text-align: center;
     text-transform: uppercase;
