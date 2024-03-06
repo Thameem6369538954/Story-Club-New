@@ -361,7 +361,7 @@ a:hover::after {
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .landingPage1 {
     /* border: 1px solid red; */
-    height: 82vh;
+    height: 72vh;
   }
   .bottomYellowBox {
     background-color: #f5c365;
