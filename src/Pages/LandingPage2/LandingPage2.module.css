@@ -241,9 +241,27 @@ a:hover::after {
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
+  .section2Images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -1rem;
+    /* border: 1px solid black; */
+  }
+  .section2Images img {
+    width: 80%;
+  }
+  .bottomYellowBoxCon {
+    display: flex;
+    /* flex-direction: column; */
+    margin: -1% auto;
+    background-color: #dc6e66;
+    height: 20%;
+    margin-top: 45px;
+    padding: 20px;
+  }
   .landingPage2 {
     /* border: 1px solid red; */
-    height: 76vh;
+    height: 8 6vh;
     margin-top: 2%;
     background-color: #dc6e66;
   }
