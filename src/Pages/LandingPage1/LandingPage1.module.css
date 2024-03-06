@@ -363,6 +363,9 @@ a:hover::after {
     /* border: 1px solid red; */
     height: 72vh;
   }
+  .btnContainer {
+    margin-top: -120px;
+  }
   .bottomYellowBox {
     background-color: #f5c365;
     width: 46%;
@@ -403,7 +406,7 @@ a:hover::after {
   }
 
   .left {
-    top: 17rem;
+    top: 7rem;
     left: 5rem;
     width: 32%;
   }
@@ -411,13 +414,13 @@ a:hover::after {
     width: 130%;
   }
   .right {
-    top: 17rem;
+    top: 7rem;
     right: 5rem;
     width: 32%;
   }
   .landingPage1video {
     width: 100%;
-    margin-top: 138px;
+    margin-top: -105px;
     border-radius: 20px;
   }
   .right img {
