@@ -52,13 +52,14 @@
 .Like {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 5rem;
+  justify-content: flex-start;
+  /* gap: 5rem; */
 }
 .vidul li {
   color: #5f6568;
-  padding: 20px;
+  /* padding: 1px; */
   font-weight: 10;
+  margin-right: 10px;
   font-style: normal;
 }
 .Like li {

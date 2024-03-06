@@ -3,6 +3,9 @@ import Styles from "../VideoPoster/VideoPoster.module.css";
 import Slider from "react-slick";
 import IntroductionSC from "../../Videos/IntroductionSC.mp4";
 import Hiring from "../../Videos/Hiring.mp4";
+import { FaEye } from "react-icons/fa";
+import { BiMessageAltDetail } from "react-icons/bi";
+import { TiHeartFullOutline } from "react-icons/ti";
 const VideoPoster = () => {
   const [poster, setPotster] = useState([
     {
@@ -42,7 +45,7 @@ const VideoPoster = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    dots: true,
+    dots: false,
     responsive: [
       {
         breakpoint: 380,
@@ -102,6 +105,29 @@ const VideoPoster = () => {
                     />
                     Your browser does not support the video tag.
                   </video>
+                  <div className={Styles.VideoDetails}>
+                    <div>
+                      <p>{items.title}</p>
+                    </div>
+                    <ul className={Styles.Like}>
+                      <li>
+                        <FaEye style={{ color: "#49883A", fontSize: "20px" }} />
+                        213
+                      </li>
+                      <li>
+                        <BiMessageAltDetail
+                          style={{ color: "#50A7BD", fontSize: "20px" }}
+                        />
+                        22
+                      </li>
+                      <li>
+                        <TiHeartFullOutline
+                          style={{ color: "#DC6E66", fontSize: "20px" }}
+                        />
+                        50
+                      </li>
+                    </ul>
+                  </div>
                   <p>{items.title}</p>
                 </div>
               </div>

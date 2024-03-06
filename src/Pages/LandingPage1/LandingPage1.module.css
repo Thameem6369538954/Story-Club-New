@@ -19,8 +19,8 @@
 .bottomYellowBox {
   background-color: #f5c365;
   width: 40%;
-  margin: auto;
-  padding: 30px;
+  margin: 2% auto;
+  padding: 10px;
   border-radius: 6px;
   border: 2px dashed black;
   display: flex;
@@ -361,7 +361,7 @@ a:hover::after {
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .landingPage1 {
     /* border: 1px solid red; */
-    height: 66vh;
+    height: 92vh;
   }
   .bottomYellowBox {
     background-color: #f5c365;
@@ -375,6 +375,7 @@ a:hover::after {
     align-items: center;
     gap: 1rem;
     font-size: 25px;
+    margin-top: 25px;
   }
   /* .section2 {
     border: 1px solid black;
@@ -398,10 +399,11 @@ a:hover::after {
 
   .section2Content button {
     width: 70%;
+    margin-top: 40%;
   }
 
   .left {
-    top: 7rem;
+    top: 17rem;
     left: 5rem;
     width: 32%;
   }
@@ -409,13 +411,13 @@ a:hover::after {
     width: 130%;
   }
   .right {
-    top: 7rem;
+    top: 17rem;
     right: 5rem;
     width: 32%;
   }
   .landingPage1video {
     width: 100%;
-    margin-top: -130px;
+    margin-top: 138px;
     border-radius: 20px;
   }
   .right img {
@@ -426,7 +428,7 @@ a:hover::after {
     height: 15rem;
   }
   .section2Video iframe {
-    margin-top: -30%;
+    margin-top: 30%;
     width: 100%;
   }
   .section2Buttons button {

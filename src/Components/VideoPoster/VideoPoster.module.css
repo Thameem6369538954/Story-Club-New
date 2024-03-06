@@ -4,7 +4,28 @@
   display: flex;
   flex-direction: column;
 }
-.posterVidio p {
+.VideoDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  margin-top: -1%;
+}
+.Like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Like li {
+  color: #5f6568;
+  /* padding: 20px; */
+  font-weight: 10;
+  font-style: normal;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 .videoBox {
   border-radius: 20px;
