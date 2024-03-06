@@ -277,10 +277,7 @@ const LandingPage1 = () => {
               allow="autoplay; encrypted-media"
               allowFullScreen
             ></iframe> */}
-            <video
-              controls
-              style={{ width: "100%", borderRadius: 20, marginTop: " 150px" }}
-            >
+            <video controls className={styles.landingPage1video}>
               <source
                 src={IntroductionSC}
                 type="video/mp4"
@@ -295,10 +292,9 @@ const LandingPage1 = () => {
 
           {/* <VideoPoster /> */}
           <div className={styles.btnContainer}>
-
-          <button className={styles.btn}>
-            More About Us <FaPlay />
-          </button>
+            <button className={styles.btn}>
+              More About Us <FaPlay />
+            </button>
           </div>
           {/* <div className={styles.slide}>
             <h4 className={styles.icon}>Slide to the next page.</h4>

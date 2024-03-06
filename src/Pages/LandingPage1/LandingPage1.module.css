@@ -2,6 +2,11 @@
   /* border: 1px solid red; */
   height: 97vh;
 }
+.landingPage1video {
+  width: 100%;
+  margin-top: 150px;
+  border-radius: 20px;
+}
 .section2ContentA {
   margin: auto;
   width: 100%;
@@ -94,7 +99,7 @@
 
   /* ll */
   text-decoration-thickness: auto;
-  width: 80%;
+  width: 40%;
   max-width: 460px;
   position: relative;
   cursor: pointer;
@@ -110,7 +115,7 @@
   /* margin-top: 310%; */
 }
 .btnContainer {
-  margin-top: 50px;
+  margin-top: 120px;
 }
 .btn:focus {
   outline: 0;
@@ -136,6 +141,9 @@
 }
 
 @media (min-width: 768px) {
+  .section2Content button {
+    margin: auto;
+  }
   .btn {
     padding: 0.75rem 3rem;
     font-size: 1.25rem;
@@ -194,9 +202,7 @@
   gap: 2em;
 }
 .section2Content button {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  width: 35%;
+  margin: auto;
 }
 
 .section2Content h1 {
@@ -344,6 +350,9 @@ a:hover::after {
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
+  .btnContainer {
+    margin-top: 12px;
+  }
   .animation {
     font-size: 1.5rem; /* Adjust font size for smaller screens */
   }
@@ -429,6 +438,11 @@ a:hover::after {
 }
 
 @media all and (max-width: 767px) {
+  .landingPage1video {
+    width: 100%;
+    margin-top: -40px;
+    border-radius: 20px;
+  }
   .landingPage1 {
     height: 70vh;
   }
@@ -479,7 +493,7 @@ a:hover::after {
   }
   .section2Content h1 {
     font-size: 2.5rem;
-    margin-top: 20px;
+    margin-top: -70px;
     padding: 26px;
   }
   .section2Content button {
