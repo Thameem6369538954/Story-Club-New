@@ -243,7 +243,7 @@ a:hover::after {
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .landingPage2 {
     /* border: 1px solid red; */
-    height: 66vh;
+    height: 76vh;
     margin-top: 2%;
     background-color: #dc6e66;
   }
