@@ -359,6 +359,10 @@ a:hover::after {
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
+  .landingPage1 {
+    /* border: 1px solid red; */
+    height: 66vh;
+  }
   .bottomYellowBox {
     background-color: #f5c365;
     width: 46%;
@@ -384,7 +388,7 @@ a:hover::after {
   }
 
   .section2Content h1 {
-    font-size: 33px;
+    font-size: 50px;
     /* background-color: red; */
   }
 
@@ -393,21 +397,26 @@ a:hover::after {
   }
 
   .section2Content button {
-    width: 50%;
+    width: 70%;
   }
 
   .left {
-    top: -7rem;
+    top: 7rem;
     left: 5rem;
-    width: 12%;
+    width: 32%;
   }
   .left img {
     width: 130%;
   }
   .right {
-    top: -7rem;
+    top: 7rem;
     right: 5rem;
-    width: 12%;
+    width: 32%;
+  }
+  .landingPage1video {
+    width: 100%;
+    margin-top: -130px;
+    border-radius: 20px;
   }
   .right img {
     width: 130%;
@@ -417,6 +426,7 @@ a:hover::after {
     height: 15rem;
   }
   .section2Video iframe {
+    margin-top: -30%;
     width: 100%;
   }
   .section2Buttons button {
