@@ -179,7 +179,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 91vh;
     width: 100%;
   }
   .yellowBoardA {
@@ -187,7 +187,7 @@
   }
   .VideoDetails h1 {
     font-size: 16px;
-    color: red;
+    /* color: red; */
   }
   .vidul {
     display: flex;

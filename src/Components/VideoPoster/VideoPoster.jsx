@@ -74,7 +74,7 @@ const VideoPoster = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           autoplaySpeed: 3000,
         },
