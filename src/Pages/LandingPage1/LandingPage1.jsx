@@ -172,31 +172,31 @@ const LandingPage1 = () => {
   const h1Ref = useRef(null);
   const pRef = useRef(null);
 
-  // useEffect(() => {
-  //   const spanText = (text) => {
-  //     let string = text.innerText;
-  //     let spanned = "";
-  //     for (let i = 0; i < string.length; i++) {
-  //       if (string.substring(i, i + 1) === " ")
-  //         spanned += string.substring(i, i + 1);
-  //       else spanned += "<span>" + string.substring(i, i + 1) + "</span>";
-  //     }
-  //     text.innerHTML = spanned;
+  useEffect(() => {
+    const spanText = (text) => {
+      let string = text.innerText;
+      let spanned = "";
+      for (let i = 0; i < string.length; i++) {
+        if (string.substring(i, i + 1) === " ")
+          spanned += string.substring(i, i + 1);
+        else spanned += "<span>" + string.substring(i, i + 1) + "</span>";
+      }
+      text.innerHTML = spanned;
 
-  //     let animations = text.querySelectorAll("span");
-  //     animations.forEach((letter, i) => {
-  //       letter.style.animationDelay = i * 0.1 + "s";
-  //     });
-  //   };
+      let animations = text.querySelectorAll("span");
+      animations.forEach((letter, i) => {
+        letter.style.animationDelay = i * 0.1 + "s";
+      });
+    };
 
-  //   if (h1Ref.current) {
-  //     spanText(h1Ref.current);
-  //   }
+    if (h1Ref.current) {
+      spanText(h1Ref.current);
+    }
 
-  //   if (pRef.current) {
-  //     spanText(pRef.current);
-  //   }
-  // }, []);
+    if (pRef.current) {
+      spanText(pRef.current);
+    }
+  }, []);
   useEffect(() => {
     const spanText = (text) => {
       let words = text.innerText.split(" ");
@@ -318,7 +318,7 @@ const LandingPage1 = () => {
           <img src={right} alt="rightImg" />
         </div>
       </div>
-      <div className={styles.bottomYellowBoxCon}>
+      {/* <div className={styles.bottomYellowBoxCon}>
         <div className={styles.bottomYellowBox}>
           <TbLogin2 /> <p>Publish your stories to reach millions</p>
         </div>
@@ -326,7 +326,7 @@ const LandingPage1 = () => {
           <PiTelegramLogo />
           <p>Publish your stories to reach millions</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

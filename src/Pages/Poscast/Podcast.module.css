@@ -142,6 +142,36 @@
   .yellowBoardA {
     width: 100%;
   }
+  .yellowBoard {
+    /* padding: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 40px;
+  }
+  .VideoDetails h1 {
+    font-size: 14px;
+  }
+  .vidul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 20px;
+  }
+  .Videocate p {
+    /* color: red; */
+    font-size: 18px;
+  }
+  .MainVideoBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 20px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .yellowBoardA {
