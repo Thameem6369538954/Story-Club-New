@@ -361,7 +361,7 @@ a:hover::after {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .landingPage1 {
     /* border: 1px solid red; */
-    height: 83vh;
+    height: 100vh;
   }
   .btnContainer {
     margin-top: -120px;
