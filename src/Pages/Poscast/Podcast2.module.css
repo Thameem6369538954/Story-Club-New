@@ -3,7 +3,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 150vh;
+  height: 180vh;
   width: 100%;
 }
 .PodcastMain h1 {
@@ -51,6 +51,7 @@
 }
 .MainVideoBox {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
   gap: 2rem;
@@ -144,7 +145,12 @@
 .btn:hover {
   background-color: #dc6e66;
 }
-
+.section2 h3 {
+  margin: 20px;
+  font-family: Rakkas;
+  font-size: 29px;
+  color: #e5e7eb;
+}
 @media screen and (max-width: 600px) {
   .yellowBoard {
     /* padding: 10px; */
@@ -165,7 +171,7 @@
     margin: 40px;
   }
   .VideoDetails h1 {
-    font-size: 14px;
+    font-size: 28px;
   }
   .vidul {
     display: flex;

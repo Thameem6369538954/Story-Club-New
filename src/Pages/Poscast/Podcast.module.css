@@ -3,7 +3,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 150vh;
+  height: 180vh;
   width: 100%;
 }
 .PodcastMain h1 {
@@ -141,6 +141,14 @@
 }
 
 @media screen and (max-width: 600px) {
+  .PodcastMain {
+    background-image: url("../../Images/Background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 140vh;
+    width: 100%;
+  }
   .yellowBoard {
     /* padding: 10px; */
     display: flex;
@@ -160,7 +168,7 @@
     margin: 40px;
   }
   .VideoDetails h1 {
-    font-size: 14px;
+    font-size: 28px;
   }
   .vidul {
     display: flex;

@@ -1,5 +1,11 @@
 .landingPage1 {
-  /* border: 1px solid red; */
+  background-image: url("../../Images/Background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+  width: 100%;
+  z-index: -9999;
   height: 97vh;
 }
 .landingPage1video {
@@ -171,12 +177,12 @@
   position: relative;
   top: 7rem;
   left: 11rem;
-  z-index: -1;
+  /* z-index: -1; */
   /* border: 1px solid red; */
 }
 .left img {
   width: 65%;
-  z-index: 9999;
+  /* z-index: 9999; */
 }
 .right {
   display: flex;
@@ -185,7 +191,7 @@
   position: relative;
   top: 7rem;
   right: 11rem;
-  z-index: -1;
+  /* z-index: -1; */
   /* border: 1px solid red; */
 }
 .right img {

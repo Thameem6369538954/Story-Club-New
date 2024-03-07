@@ -167,6 +167,7 @@ import { PiTelegramLogo } from "react-icons/pi";
 import IntroductionSC from "../../Videos/IntroductionSC.mp4";
 import Triel from "../../Videos/Triel.mp4";
 import VideoPoster from "../../Components/VideoPoster/VideoPoster";
+import HeaderAni from "../../Components/HeaderAni";
 
 const LandingPage1 = () => {
   const h1Ref = useRef(null);
@@ -255,6 +256,8 @@ const LandingPage1 = () => {
               <span>Real</span> Stories!
             </h1>
           </div>
+          {/* <HeaderAni /> */}
+
           <div
             style={{
               display: "flex",
