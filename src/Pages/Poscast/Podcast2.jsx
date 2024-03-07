@@ -57,7 +57,7 @@ const Podcast2 = () => {
                   </li>
                   <li>
                     <TiHeartFullOutline
-                      style={{ color: "#DC6E66", fontSize: "20px" }}
+                      style={{ color: "#A42B22", fontSize: "20px" }}
                     />
                     50
                   </li>

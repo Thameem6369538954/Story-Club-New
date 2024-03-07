@@ -135,6 +135,7 @@ const VideoPoster = () => {
           })}
         </Slider>
       </div>
+      <button className={Styles.btn}>View More</button>
     </div>
   );
 };
