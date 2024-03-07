@@ -7,6 +7,7 @@ import { BiMessageAltDetail } from "react-icons/bi";
 import { TiHeartFullOutline } from "react-icons/ti";
 import VideoPoster from "../../Components/VideoPoster/VideoPoster";
 import IntroductionSC from "../../Videos/IntroductionSC.mp4";
+import Podcast2 from "./Podcast2";
 const Podcast = () => {
   return (
     <div>
@@ -37,6 +38,7 @@ const Podcast = () => {
               Your browser does not support the video tag.
             </video>
             <div className={Styles.VideoDetails}>
+              <h1 className={Styles.Heading}>Sunny mornings</h1>
               <h1>Introduction Our Story Club</h1>
               <div className={Styles.Videocate}>
                 <ul className={Styles.vidul}>
@@ -74,6 +76,7 @@ const Podcast = () => {
           <VideoPoster />
         </div>
       </div>
+      <Podcast2 />
     </div>
   );
 };

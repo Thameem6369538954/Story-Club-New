@@ -3,12 +3,21 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 180vh;
+  height: 150vh;
   width: 100%;
 }
 .PodcastMain h1 {
   text-align: center;
   margin: 10px;
+}
+.Heading {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.Heading .letter {
+  display: inline-block;
+  line-height: 1em;
 }
 .yellowBoardA {
   display: flex;
