@@ -152,3 +152,12 @@
     /* flex-direction: column; */
   }
 }
+@media screen and (min-width: 700px) and (max-width: 768px) {
+  .VideoPosterMain {
+    /* margin-left: 360%; */
+    width: 95%;
+    margin: 0px;
+    /* display: flex; */
+    /* flex-direction: column; */
+  }
+}

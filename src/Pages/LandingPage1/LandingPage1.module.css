@@ -364,6 +364,16 @@ a:hover::after {
   }
 }
 @media screen and (min-width: 700px) and (max-width: 768px) {
+  .landingPage1 {
+    background-image: url("../../Images/Background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* height: 100vh; */
+    width: 100%;
+    z-index: -9999;
+    height: 87vh;
+  }
   .landingPage1video {
     width: 39%;
     position: absolute;

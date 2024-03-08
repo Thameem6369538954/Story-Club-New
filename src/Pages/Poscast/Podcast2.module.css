@@ -233,3 +233,25 @@
     margin: 20px;
   }
 }
+@media screen and (min-width: 700px) and (max-width: 768px) {
+  .PodcastMain {
+    background-image: url("../../Images/Bgimage.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 140vh;
+    width: 100%;
+  }
+  .Videocate p {
+    color: whitesmoke;
+    font-size: 16px;
+  }
+  .vidul {
+    display: flex;
+    /* background-color: ; */
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 20px;
+  }
+}
