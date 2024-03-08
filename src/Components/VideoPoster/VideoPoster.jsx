@@ -3,9 +3,12 @@ import Styles from "../VideoPoster/VideoPoster.module.css";
 import Slider from "react-slick";
 import IntroductionSC from "../../Videos/IntroductionSC.mp4";
 import Hiring from "../../Videos/Hiring.mp4";
+import StoryTellerwithcontent from "../../Videos/StoryTellerwithcontent.mp4";
 import { FaEye } from "react-icons/fa";
 import { BiMessageAltDetail } from "react-icons/bi";
+import StoryWriterwithcontent from "../../Videos/StoryWriterwithcontent.mp4";
 import { TiHeartFullOutline } from "react-icons/ti";
+import AbutVideo from "../../Videos/AbutVideo.mp4";
 const VideoPoster = () => {
   const [poster, setPotster] = useState([
     {
@@ -18,32 +21,32 @@ const VideoPoster = () => {
       id: 2,
       title: "STORY CLUB IS HIRING",
       discription: "a little boy changing his life",
-      source: IntroductionSC,
+      source: Hiring,
     },
     {
       id: 3,
       title: "WRITE YOUR STORY",
       discription: "a little boy changing his life",
-      source: IntroductionSC,
+      source: StoryWriterwithcontent,
     },
     {
       id: 4,
       title: "TELL YOUR STORY",
       discription: "a little boy changing his life",
-      source: IntroductionSC,
+      source: StoryTellerwithcontent,
     },
     {
       id: 5,
       title: "FLASHBACK",
       discription: "a little boy changing his life",
-      source: IntroductionSC,
+      source: AbutVideo,
     },
   ]);
 
   const settings = {
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     dots: false,
     responsive: [
