@@ -168,7 +168,7 @@ import IntroductionSC from "../../Videos/IntroductionSC.mp4";
 import Triel from "../../Videos/Triel.mp4";
 import VideoPoster from "../../Components/VideoPoster/VideoPoster";
 import HeaderAni from "../../Components/HeaderAni";
-
+import introductionThumbnail from "../../Images/introductionThumbnail.png";
 const LandingPage1 = () => {
   const h1Ref = useRef(null);
   const pRef = useRef(null);
@@ -281,7 +281,11 @@ const LandingPage1 = () => {
               allow="autoplay; encrypted-media"
               allowFullScreen
             ></iframe> */}
-            <video controls className={styles.landingPage1video}>
+            <video
+              controls
+              poster={introductionThumbnail}
+              className={styles.landingPage1video}
+            >
               <source
                 src={IntroductionSC}
                 type="video/mp4"
