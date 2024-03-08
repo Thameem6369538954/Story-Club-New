@@ -382,14 +382,14 @@ a:hover::after {
     border-radius: 20px;
   }
   .left {
-    top: 9rem;
+    top: 12rem;
     left: 2rem;
-    width: 72%;
+    width: 82%;
   }
   .right {
-    top: 9rem;
+    top: 12rem;
     right: 1rem;
-    width: 72%;
+    width: 82%;
   }
   .section2Content h1 {
     width: 169%;
