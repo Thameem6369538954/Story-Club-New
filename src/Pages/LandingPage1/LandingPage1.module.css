@@ -363,7 +363,13 @@ a:hover::after {
     font-size: 1.5rem; /* Adjust font size for smaller screens */
   }
 }
-
+@media screen and (min-width: 700px) and (max-width: 768px) {
+  .landingPage1video {
+    width: 100%;
+    margin-top: 40px;
+    border-radius: 20px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .landingPage1 {
     /* border: 1px solid red; */
@@ -458,7 +464,7 @@ a:hover::after {
   }
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 700px) {
   .landingPage1video {
     width: 100%;
     margin-top: -40px;
