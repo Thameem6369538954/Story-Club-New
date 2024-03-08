@@ -281,11 +281,7 @@ const LandingPage1 = () => {
               allow="autoplay; encrypted-media"
               allowFullScreen
             ></iframe> */}
-            <video
-              controls
-              poster={introductionThumbnail}
-              className={styles.landingPage1video}
-            >
+            <video controls className={styles.landingPage1video}>
               <source
                 src={IntroductionSC}
                 type="video/mp4"

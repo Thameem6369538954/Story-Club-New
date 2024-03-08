@@ -9,6 +9,7 @@ import { BiMessageAltDetail } from "react-icons/bi";
 import StoryWriterwithcontent from "../../Videos/StoryWriterwithcontent.mp4";
 import { TiHeartFullOutline } from "react-icons/ti";
 import AbutVideo from "../../Videos/AbutVideo.mp4";
+
 const VideoPoster = () => {
   const [poster, setPotster] = useState([
     {
