@@ -102,14 +102,10 @@
 }
 
 @media screen and (max-width: 600px) {
-  .VideoPosterMain {
-    width: 91%;
-    margin: auto -20%;
-  }
   .videoBox {
     border-radius: 20px;
     background-color: #fcf7f1;
-    width: 90%;
+    width: 70%;
     height: 290px;
     padding: 10px;
     margin-left: 10px;
@@ -120,8 +116,8 @@
     box-shadow: 18px 22px 15px -3px rgba(0, 0, 0, 0.1);
   }
   .VideoPosterMain {
-    margin-left: -60%;
-    width: 100%;
+    margin-left: -160%;
+    width: 93%;
     margin: 0px;
     display: flex;
     flex-direction: column;

@@ -152,6 +152,13 @@
   color: #e5e7eb;
 }
 @media screen and (max-width: 600px) {
+  .vidul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 20px;
+  }
   .yellowBoard {
     /* padding: 10px; */
     display: flex;
