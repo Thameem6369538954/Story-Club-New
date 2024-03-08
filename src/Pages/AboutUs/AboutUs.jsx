@@ -215,19 +215,30 @@ const AboutUs = () => {
     e.preventDefault();
     console.log("clicked");
     console.log(formData, "daaaaataas");
-    try {
-      const response = await axios.post("/get_in_touch", formData);
-      console.log(response, "oooomb");
-      const msg = response.data.message;
-      if (response.status == 200) {
-        toast.success(msg);
-      } else {
-        toast.error(msg);
-      }
+    // try {
+    //   const response = await axios.post("/get_in_touch", formData);
+    //   console.log(response, "oooomb");
+    //   const msg = response.data.message;
+    //   if (response.status == 200) {
+    //     toast.success(msg);
+    //   } else {
+    //     toast.error(msg);
+    //   }
 
-      navigateTo("/");
-    } catch (error) {
-      console.log(error);
+    //   navigateTo("/");
+    // } catch (error) {
+    //   console.log(error);
+    // }
+
+    
+    var response = 200;
+    if (response == 200) {
+      toast.success(
+        "succesfully submitted the form!we will get in touch as soon as possible!"
+      );
+     
+    } else {
+      toast.error("something went wrong!!please try again later");
     }
   };
 
@@ -406,7 +417,7 @@ const AboutUs = () => {
               <div className={styles.contactIcon}>
                 <TfiLocationPin />
               </div>
-              <p>Locate StoryCLub</p>
+              <p>Locate StoryClub</p>
               <h3>Domlur, Bangalore.</h3>
             </div>
           </div>

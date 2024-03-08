@@ -38,7 +38,7 @@ const Podcast = () => {
               Your browser does not support the video tag.
             </video>
             <div className={Styles.VideoDetails}>
-              <h1>Introduction Our Story Club</h1>
+              <h1>Introduction of Our Story Club</h1>
               <div className={Styles.Videocate}>
                 <ul className={Styles.vidul}>
                   <li>Motivational</li>

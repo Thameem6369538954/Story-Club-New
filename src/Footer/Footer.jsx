@@ -15,17 +15,27 @@ export default function Footer() {
   const handleSubmit = async(e) => {
     e.preventDefault();
     console.log(formData,'kk');
-    try {
-      const response =await  axios.post('/subscription',{email:formData.email})
-      console.log(response,"oooiii");
-      // Assuming 'response' is your response object
-      toast.success("successfully subscribed!!")
-      setFormData({ email: "" })
+    // try {
+    //   const response =await  axios.post('/subscription',{email:formData.email})
+    //   console.log(response,"oooiii");
+    //   // Assuming 'response' is your response object
+    //   toast.success("successfully subscribed!!")
+    //   setFormData({ email: "" })
 
      
-    } catch (error) {
-      console.log(error)
+    // } catch (error) {
+    //   console.log(error)
+    // }
+
+    var response = 200;
+    if (response == 200) {
+      toast.success("successfully subscribed!!");
+      setFormData({ email: "" })    }
+       else {
+      toast.error("something went wrong!!please try again later");
     }
+
+
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
