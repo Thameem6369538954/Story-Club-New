@@ -586,7 +586,7 @@ a:hover::after {
     font-size: 2.7rem;
     margin-top: -1px;
     padding: 30px;
-    color: red;
+    /* color: red; */
   }
   .section2Content button {
     width: 70%;
