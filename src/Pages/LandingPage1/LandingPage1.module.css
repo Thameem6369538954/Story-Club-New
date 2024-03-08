@@ -585,7 +585,8 @@ a:hover::after {
   .section2Content h1 {
     font-size: 2.5rem;
     margin-top: -1px;
-    padding: 28px;
+    padding: 30px;
+    color: red;
   }
   .section2Content button {
     width: 70%;
